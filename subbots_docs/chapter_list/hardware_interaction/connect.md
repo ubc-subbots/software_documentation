@@ -19,4 +19,5 @@ Code block here
 ### Tether Cable
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MA0bP5VJJCE?si=eemeSJGcZxIzR2Dv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+### Establishing Robot Connection
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lZHeuoeHTBk?si=rVq5vI0BmhxCjK4m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
