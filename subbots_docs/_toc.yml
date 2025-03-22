@@ -1,0 +1,15 @@
+format: jb-book
+root: intro
+chapters:
+  - file: chapter_list/hardware_interaction/connect
+    title: Hardware Connection
+    sections:
+      - file: chapter_list/hardware_interaction/thruster_configuration
+
+  - file: chapter_list/code/launch
+    title: Code
+    sections:
+      - file: chapter_list/code/trajectory_generator_launch
+
+  - file: markdown_guide
+    title: Misc
