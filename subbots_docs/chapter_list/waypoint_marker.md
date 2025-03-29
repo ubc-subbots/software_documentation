@@ -1,0 +1,14 @@
+# waypoint_marker.md
+
+```python
+pipeline_manager:
+  ros__parameters:
+    pipeline:
+      components:
+        - triton_controls::WaypointMarker
+      pkg_names:
+        - triton_controls
+      namespace: /triton/waypoint
+    use_sim_time: false
+
+```

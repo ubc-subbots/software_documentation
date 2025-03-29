@@ -11,5 +11,219 @@ chapters:
     sections:
       - file: chapter_list/code/trajectory_generator_launch
 
+  - file: chapter_list/triton_bringup
+    title: Triton Bringup
+    sections:
+    - file: chapter_list/teleop_sim_bringup_launch
+      title: Teleop Sim Bringup Launch
+  - file: chapter_list/triton_controls
+    title: Triton Controls
+    sections:
+    - file: chapter_list/state_estimator_config
+    - file: chapter_list/state_estimator_config_GT_only
+    - file: chapter_list/state_estimator_config_IMU_only
+    - file: chapter_list/thruster_config
+    - file: chapter_list/thruster_config_triton_mini
+    - file: chapter_list/state_estimator_launch
+    - file: chapter_list/thrust_allocator_launch
+    - file: chapter_list/trajectory_generator_launch
+    - file: chapter_list/waypoint_marker_launch
+    - file: chapter_list/serial_subscriber
+    - file: chapter_list/thrust_allocator
+    - file: chapter_list/trajectory_generator
+    - file: chapter_list/waypoint_marker
+    - file: chapter_list/test_thruster_simple_config
+    - file: chapter_list/auv_transform_publisher
+    - file: chapter_list/predetermined_route
+    - file: chapter_list/predetermined_thrust
+    - file: chapter_list/waypoint_marker_tester
+  - file: chapter_list/triton_example
+    title: Triton Example
+    sections:
+    - file: chapter_list/params_one
+      title: Params One.Y
+    - file: chapter_list/params_two
+      title: Params Two.Y
+    - file: chapter_list/example_launch
+      title: Example Launch
+    - file: chapter_list/component_one
+      title: Component One.
+    - file: chapter_list/component_two
+      title: Component Two.
+    - file: chapter_list/test_example_launch
+      title: Test Example Launch
+  - file: chapter_list/triton_gate
+    title: Triton Gate
+    sections:
+    - file: chapter_list/gate_detector_launch
+      title: Gate Detector Launch
+    - file: chapter_list/gate_detector
+      title: Gate Detector.
+  - file: chapter_list/triton_gazebo
+    title: Triton Gazebo
+    sections:
+    - file: chapter_list/underwater_camera
+      title: Underwater Camera.Y
+    - file: chapter_list/gazebo_utils
+      title: Gazebo Utils.
+    - file: chapter_list/gate_navigation_test
+      title: Gate Navigation Test
+    - file: chapter_list/gate_navigation_test_triton_mini
+      title: Gate Navigation Test Triton Mini
+    - file: chapter_list/gazebo_launch
+      title: Gazebo Launch
+    - file: chapter_list/gendata_launch
+      title: Gendata Launch
+    - file: chapter_list/predetermined_route_test_launch
+      title: Predetermined Route Test Launch
+    - file: chapter_list/rviz_launch
+      title: Rviz Launch
+    - file: chapter_list/train_yolo_launch
+      title: Train Yolo Launch
+    - file: chapter_list/ukf_teleop_sim_launch
+      title: Ukf Teleop Sim Launch
+    - file: chapter_list/underwater_camera_launch
+      title: Underwater Camera Launch
+    - file: chapter_list/waypoint_pid_test_launch
+      title: Waypoint Pid Test Launch
+    - file: chapter_list/waypoint_test_launch
+      title: Waypoint Test Launch
+    - file: chapter_list/math_utils
+      title: Math Utils.
+    - file: chapter_list/bounding_box_plugin
+      title: Bounding Box Plugin.
+    - file: chapter_list/camera_orbit_plugin
+      title: Camera Orbit Plugin.
+    - file: chapter_list/ground_truth_sensor
+      title: Ground Truth Sensor.
+    - file: chapter_list/hydrodynamics_plugin
+      title: Hydrodynamics Plugin.
+    - file: chapter_list/random_camera_plugin
+      title: Random Camera Plugin.
+    - file: chapter_list/smooth_camera_plugin
+      title: Smooth Camera Plugin.
+    - file: chapter_list/thruster_driver_plugin
+      title: Thruster Driver Plugin.
+    - file: chapter_list/test_gazebo_launch
+      title: Test Gazebo Launch
+    - file: chapter_list/test_underwater_camera_launch
+      title: Test Underwater Camera Launch
+    - file: chapter_list/bounding_box_image_saver
+      title: Bounding Box Image Saver
+    - file: chapter_list/clean_data
+      title: Clean Data
+    - file: chapter_list/train_yolo
+      title: Train Yolo
+  - file: chapter_list/triton_object_recognition
+    title: Triton Object Recognition
+    sections:
+    - file: chapter_list/tiny_yolov3_launch
+      title: Tiny Yolov3 Launch
+    - file: chapter_list/tiny_yolov4_launch
+      title: Tiny Yolov4 Launch
+    - file: chapter_list/tiny_yolov4_realsense_launch
+      title: Tiny Yolov4 Realsense Launch
+    - file: chapter_list/object_recognizer
+      title: Object Recognizer.
+    - file: chapter_list/test_object_recognition_launch
+      title: Test Object Recognition Launch
+  - file: chapter_list/triton_pid_controller
+    title: Triton Pid Controller
+    sections:
+    - file: chapter_list/pid
+      title: Pid.Y
+    - file: chapter_list/triton_pid_controller_launch
+      title: Triton Pid Controller Launch
+  - file: chapter_list/triton_pipeline
+    title: Triton Pipeline
+    sections:
+    - file: chapter_list/camera1
+      title: Camera1.Y
+    - file: chapter_list/camera1_info
+      title: Camera1 Info.Y
+    - file: chapter_list/camera2
+      title: Camera2.Y
+    - file: chapter_list/camera2_info
+      title: Camera2 Info.Y
+    - file: chapter_list/example
+      title: Example.Y
+    - file: chapter_list/example_sequence
+      title: Example Sequence.Y
+    - file: chapter_list/imu_filter
+      title: Imu Filter.Y
+    - file: chapter_list/pipeline_sequence
+      title: Pipeline Sequence.Y
+    - file: chapter_list/task_gate_search
+      title: Task Gate Search.Y
+    - file: chapter_list/task_gate_yolo
+      title: Task Gate Yolo.Y
+    - file: chapter_list/cameras_launch
+      title: Cameras Launch
+    - file: chapter_list/pipeline_launch
+      title: Pipeline Launch
+    - file: chapter_list/pipeline_manager_launch
+      title: Pipeline Manager Launch
+    - file: chapter_list/pool_testing_jetson_launch
+      title: Pool Testing Jetson Launch
+    - file: chapter_list/pool_testing_surface_launch
+      title: Pool Testing Surface Launch
+    - file: chapter_list/pool_testing_triton_mini
+      title: Pool Testing Triton Mini
+    - file: chapter_list/pool_testing_triton_mini_auto
+      title: Pool Testing Triton Mini Auto
+    - file: chapter_list/pool_testing_triton_mini_route
+      title: Pool Testing Triton Mini Route
+    - file: chapter_list/pool_testing_triton_mini_teleop
+      title: Pool Testing Triton Mini Teleop
+    - file: chapter_list/pool_testing_triton_mini_thrust
+      title: Pool Testing Triton Mini Thrust
+    - file: chapter_list/surface_testing_triton_mini
+      title: Surface Testing Triton Mini
+    - file: chapter_list/surface_testing_triton_mini_laptop
+      title: Surface Testing Triton Mini Laptop
+    - file: chapter_list/teensy_test_launch
+      title: Teensy Test Launch
+    - file: chapter_list/thruster_testing
+      title: Thruster Testing
+    - file: chapter_list/test_bad_yaml
+      title: Test Bad Yaml.Y
+    - file: chapter_list/test_comp_pack_mismatch
+      title: Test Comp Pack Mismatch.Y
+    - file: chapter_list/test_no_namespace
+      title: Test No Namespace.Y
+    - file: chapter_list/test_no_param
+      title: Test No Param.Y
+    - file: chapter_list/test_param_mismatch
+      title: Test Param Mismatch.Y
+    - file: chapter_list/test_run_comp_not_valid
+      title: Test Run Comp Not Valid.Y
+    - file: chapter_list/test_run_pkg_not_valid
+      title: Test Run Pkg Not Valid.Y
+    - file: chapter_list/test_something
+      title: Test Something.Y
+    - file: chapter_list/load_params
+      title: Load Params
+    - file: chapter_list/pipeline_manager
+      title: Pipeline Manager
+    - file: chapter_list/pipeline_sequence_manager
+      title: Pipeline Sequence Manager
+  - file: chapter_list/triton_teleop
+    title: Triton Teleop
+    sections:
+    - file: chapter_list/keyboard_teleop_launch
+      title: Keyboard Teleop Launch
+    - file: chapter_list/keyboard_teleop
+      title: Keyboard Teleop
+    - file: chapter_list/key_publisher
+      title: Key Publisher
+    - file: chapter_list/sim_thrust_mapper
+      title: Sim Thrust Mapper
+  - file: chapter_list/triton_vision_utils
+    title: Triton Vision Utils
+    sections:
+    - file: chapter_list/contour_features
+      title: Contour Features.
+    - file: chapter_list/object_detector
+      title: Object Detector.
   - file: markdown_guide
     title: Misc

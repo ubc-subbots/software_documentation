@@ -1,0 +1,261 @@
+jb-book:
+  root: intro
+  chapters:
+  - file: chapter_list/intro
+    title: Intro
+    sections:
+    - file: chapter_list/markdown_guide
+      title: Misc
+  - file: chapter_list/triton_bringup
+    title: Triton Bringup
+    sections:
+    - file: chapter_list/teleop_sim_bringup_launch.md
+      title: Teleop Sim Bringup Launch
+    - file: chapter_list/__init__.md
+      title: '  Init  '
+  - file: chapter_list/triton_controls
+    title: Triton Controls
+    sections:
+    - file: chapter_list/state_estimator_config.md
+      title: State Estimator Config.Y
+    - file: chapter_list/state_estimator_config_GT_only.md
+      title: State Estimator Config Gt Only.Y
+    - file: chapter_list/state_estimator_config_IMU_only.md
+      title: State Estimator Config Imu Only.Y
+    - file: chapter_list/thruster_config.md
+      title: Thruster Config.Y
+    - file: chapter_list/thruster_config_triton_mini.md
+      title: Thruster Config Triton Mini.Y
+    - file: chapter_list/state_estimator_launch.md
+      title: State Estimator Launch
+    - file: chapter_list/thrust_allocator_launch.md
+      title: Thrust Allocator Launch
+    - file: chapter_list/trajectory_generator_launch.md
+      title: Trajectory Generator Launch
+    - file: chapter_list/waypoint_marker_launch.md
+      title: Waypoint Marker Launch
+    - file: chapter_list/serial_subscriber.md
+      title: Serial Subscriber.
+    - file: chapter_list/thrust_allocator.md
+      title: Thrust Allocator.
+    - file: chapter_list/trajectory_generator.md
+      title: Trajectory Generator.
+    - file: chapter_list/waypoint_marker.md
+      title: Waypoint Marker.
+    - file: chapter_list/test_thruster_simple_config.md
+      title: Test Thruster Simple Config.Y
+    - file: chapter_list/auv_transform_publisher.md
+      title: Auv Transform Publisher
+    - file: chapter_list/predetermined_route.md
+      title: Predetermined Route
+    - file: chapter_list/predetermined_thrust.md
+      title: Predetermined Thrust
+    - file: chapter_list/waypoint_marker_tester.md
+      title: Waypoint Marker Tester
+    - file: chapter_list/__init__.md
+      title: '  Init  '
+  - file: chapter_list/triton_example
+    title: Triton Example
+    sections:
+    - file: chapter_list/params_one.md
+      title: Params One.Y
+    - file: chapter_list/params_two.md
+      title: Params Two.Y
+    - file: chapter_list/example_launch.md
+      title: Example Launch
+    - file: chapter_list/component_one.md
+      title: Component One.
+    - file: chapter_list/component_two.md
+      title: Component Two.
+    - file: chapter_list/test_example_launch.md
+      title: Test Example Launch
+  - file: chapter_list/triton_gate
+    title: Triton Gate
+    sections:
+    - file: chapter_list/accuracy_opencv_model.xml
+      title: Accuracy Opencv Model.
+    - file: chapter_list/gate_detector_launch.md
+      title: Gate Detector Launch
+    - file: chapter_list/gate_detector.md
+      title: Gate Detector.
+  - file: chapter_list/triton_gazebo
+    title: Triton Gazebo
+    sections:
+    - file: chapter_list/underwater_camera.md
+      title: Underwater Camera.Y
+    - file: chapter_list/gazebo_utils.md
+      title: Gazebo Utils.
+    - file: chapter_list/gate_navigation_test.md
+      title: Gate Navigation Test
+    - file: chapter_list/gate_navigation_test_triton_mini.md
+      title: Gate Navigation Test Triton Mini
+    - file: chapter_list/gazebo_launch.md
+      title: Gazebo Launch
+    - file: chapter_list/gendata_launch.md
+      title: Gendata Launch
+    - file: chapter_list/predetermined_route_test_launch.md
+      title: Predetermined Route Test Launch
+    - file: chapter_list/rviz_launch.md
+      title: Rviz Launch
+    - file: chapter_list/train_yolo_launch.md
+      title: Train Yolo Launch
+    - file: chapter_list/ukf_teleop_sim_launch.md
+      title: Ukf Teleop Sim Launch
+    - file: chapter_list/underwater_camera_launch.md
+      title: Underwater Camera Launch
+    - file: chapter_list/waypoint_pid_test_launch.md
+      title: Waypoint Pid Test Launch
+    - file: chapter_list/waypoint_test_launch.md
+      title: Waypoint Test Launch
+    - file: chapter_list/math_utils.md
+      title: Math Utils.
+    - file: chapter_list/bounding_box_plugin.md
+      title: Bounding Box Plugin.
+    - file: chapter_list/camera_orbit_plugin.md
+      title: Camera Orbit Plugin.
+    - file: chapter_list/ground_truth_sensor.md
+      title: Ground Truth Sensor.
+    - file: chapter_list/hydrodynamics_plugin.md
+      title: Hydrodynamics Plugin.
+    - file: chapter_list/random_camera_plugin.md
+      title: Random Camera Plugin.
+    - file: chapter_list/smooth_camera_plugin.md
+      title: Smooth Camera Plugin.
+    - file: chapter_list/thruster_driver_plugin.md
+      title: Thruster Driver Plugin.
+    - file: chapter_list/underwater_camera.md
+      title: Underwater Camera.
+    - file: chapter_list/test_gazebo_launch.md
+      title: Test Gazebo Launch
+    - file: chapter_list/test_underwater_camera_launch.md
+      title: Test Underwater Camera Launch
+    - file: chapter_list/bounding_box_image_saver.md
+      title: Bounding Box Image Saver
+    - file: chapter_list/clean_data.md
+      title: Clean Data
+    - file: chapter_list/train_yolo.md
+      title: Train Yolo
+    - file: chapter_list/__init__.md
+      title: '  Init  '
+  - file: chapter_list/triton_interfaces
+    title: Triton Interfaces
+    sections: []
+  - file: chapter_list/triton_object_recognition
+    title: Triton Object Recognition
+    sections:
+    - file: chapter_list/tiny_yolov3_launch.md
+      title: Tiny Yolov3 Launch
+    - file: chapter_list/tiny_yolov4_launch.md
+      title: Tiny Yolov4 Launch
+    - file: chapter_list/tiny_yolov4_realsense_launch.md
+      title: Tiny Yolov4 Realsense Launch
+    - file: chapter_list/object_recognizer.md
+      title: Object Recognizer.
+    - file: chapter_list/test_object_recognition_launch.md
+      title: Test Object Recognition Launch
+  - file: chapter_list/triton_pid_controller
+    title: Triton Pid Controller
+    sections:
+    - file: chapter_list/pid.md
+      title: Pid.Y
+    - file: chapter_list/triton_pid_controller_launch.md
+      title: Triton Pid Controller Launch
+    - file: chapter_list/triton_pid_controller.md
+      title: Triton Pid Controller.
+  - file: chapter_list/triton_pipeline
+    title: Triton Pipeline
+    sections:
+    - file: chapter_list/camera1.md
+      title: Camera1.Y
+    - file: chapter_list/camera1_info.md
+      title: Camera1 Info.Y
+    - file: chapter_list/camera2.md
+      title: Camera2.Y
+    - file: chapter_list/camera2_info.md
+      title: Camera2 Info.Y
+    - file: chapter_list/example.md
+      title: Example.Y
+    - file: chapter_list/example_sequence.md
+      title: Example Sequence.Y
+    - file: chapter_list/imu_filter.md
+      title: Imu Filter.Y
+    - file: chapter_list/pipeline_sequence.md
+      title: Pipeline Sequence.Y
+    - file: chapter_list/task_gate_search.md
+      title: Task Gate Search.Y
+    - file: chapter_list/task_gate_yolo.md
+      title: Task Gate Yolo.Y
+    - file: chapter_list/waypoint_marker.md
+      title: Waypoint Marker.Y
+    - file: chapter_list/cameras_launch.md
+      title: Cameras Launch
+    - file: chapter_list/pipeline_launch.md
+      title: Pipeline Launch
+    - file: chapter_list/pipeline_manager_launch.md
+      title: Pipeline Manager Launch
+    - file: chapter_list/pool_testing_jetson_launch.md
+      title: Pool Testing Jetson Launch
+    - file: chapter_list/pool_testing_surface_launch.md
+      title: Pool Testing Surface Launch
+    - file: chapter_list/pool_testing_triton_mini.md
+      title: Pool Testing Triton Mini
+    - file: chapter_list/pool_testing_triton_mini_auto.md
+      title: Pool Testing Triton Mini Auto
+    - file: chapter_list/pool_testing_triton_mini_route.md
+      title: Pool Testing Triton Mini Route
+    - file: chapter_list/pool_testing_triton_mini_teleop.md
+      title: Pool Testing Triton Mini Teleop
+    - file: chapter_list/pool_testing_triton_mini_thrust.md
+      title: Pool Testing Triton Mini Thrust
+    - file: chapter_list/surface_testing_triton_mini.md
+      title: Surface Testing Triton Mini
+    - file: chapter_list/surface_testing_triton_mini_laptop.md
+      title: Surface Testing Triton Mini Laptop
+    - file: chapter_list/teensy_test_launch.md
+      title: Teensy Test Launch
+    - file: chapter_list/thruster_testing.md
+      title: Thruster Testing
+    - file: chapter_list/test_bad_yaml.md
+      title: Test Bad Yaml.Y
+    - file: chapter_list/test_comp_pack_mismatch.md
+      title: Test Comp Pack Mismatch.Y
+    - file: chapter_list/test_no_namespace.md
+      title: Test No Namespace.Y
+    - file: chapter_list/test_no_param.md
+      title: Test No Param.Y
+    - file: chapter_list/test_param_mismatch.md
+      title: Test Param Mismatch.Y
+    - file: chapter_list/test_run_comp_not_valid.md
+      title: Test Run Comp Not Valid.Y
+    - file: chapter_list/test_run_pkg_not_valid.md
+      title: Test Run Pkg Not Valid.Y
+    - file: chapter_list/test_something.md
+      title: Test Something.Y
+    - file: chapter_list/load_params.md
+      title: Load Params
+    - file: chapter_list/pipeline_manager.md
+      title: Pipeline Manager
+    - file: chapter_list/pipeline_sequence_manager.md
+      title: Pipeline Sequence Manager
+    - file: chapter_list/__init__.md
+      title: '  Init  '
+  - file: chapter_list/triton_teleop
+    title: Triton Teleop
+    sections:
+    - file: chapter_list/keyboard_teleop_launch.md
+      title: Keyboard Teleop Launch
+    - file: chapter_list/keyboard_teleop.md
+      title: Keyboard Teleop
+    - file: chapter_list/key_publisher.md
+      title: Key Publisher
+    - file: chapter_list/sim_thrust_mapper.md
+      title: Sim Thrust Mapper
+    - file: chapter_list/__init__.md
+      title: '  Init  '
+  - file: chapter_list/triton_vision_utils
+    title: Triton Vision Utils
+    sections:
+    - file: chapter_list/contour_features.md
+      title: Contour Features.
+    - file: chapter_list/object_detector.md
+      title: Object Detector.

@@ -1,0 +1,850 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>state_estimator_config_IMU_only.md &#8212; Software Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter_list/state_estimator_config_IMU_only';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="thruster_config.md" href="thruster_config.html" />
+    <link rel="prev" title="state_estimator_config_GT_only.md" href="state_estimator_config_GT_only.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/subbots_logo.jpg" class="logo__image only-light" alt="Software Documentation - Home"/>
+    <script>document.write(`<img src="../_static/subbots_logo.jpg" class="logo__image only-dark" alt="Software Documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="hardware_interaction/connect.html">Hardware Connection</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware_interaction/thruster_configuration.html">Thruster Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="code/launch.html">Launch Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="code/trajectory_generator_launch.html">trajectory_generator_launch.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_bringup.html">Triton Bringup</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="teleop_sim_bringup_launch.html">Teleop Sim Bringup Launch</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="triton_controls.html">Triton Controls</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="state_estimator_config.html">state_estimator_config.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="state_estimator_config_GT_only.html">state_estimator_config_GT_only.md</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">state_estimator_config_IMU_only.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thruster_config.html">thruster_config.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thruster_config_triton_mini.html">thruster_config_triton_mini.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="state_estimator_launch.html">state_estimator_launch.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thrust_allocator_launch.html">thrust_allocator_launch.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trajectory_generator_launch.html">trajectory_generator_launch.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waypoint_marker_launch.html">waypoint_marker_launch.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serial_subscriber.html">serial_subscriber.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thrust_allocator.html">thrust_allocator.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trajectory_generator.html">trajectory_generator.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waypoint_marker.html">waypoint_marker.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_thruster_simple_config.html">test_thruster_simple_config.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auv_transform_publisher.html">auv_transform_publisher.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="predetermined_route.html">predetermined_route.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="predetermined_thrust.html">predetermined_thrust.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waypoint_marker_tester.html">waypoint_marker_tester.md</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_example.html">Triton Example</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="params_one.html">Params One.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="params_two.html">Params Two.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_launch.html">Example Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component_one.html">Component One.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component_two.html">Component Two.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_example_launch.html">Test Example Launch</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_gate.html">Triton Gate</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="gate_detector_launch.html">Gate Detector Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gate_detector.html">Gate Detector.</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_gazebo.html">Triton Gazebo</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="underwater_camera.html">Underwater Camera.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo_utils.html">Gazebo Utils.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gate_navigation_test.html">Gate Navigation Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gate_navigation_test_triton_mini.html">Gate Navigation Test Triton Mini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo_launch.html">Gazebo Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gendata_launch.html">Gendata Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="predetermined_route_test_launch.html">Predetermined Route Test Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rviz_launch.html">Rviz Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train_yolo_launch.html">Train Yolo Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ukf_teleop_sim_launch.html">Ukf Teleop Sim Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="underwater_camera_launch.html">Underwater Camera Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waypoint_pid_test_launch.html">Waypoint Pid Test Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waypoint_test_launch.html">Waypoint Test Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math_utils.html">Math Utils.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounding_box_plugin.html">Bounding Box Plugin.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camera_orbit_plugin.html">Camera Orbit Plugin.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ground_truth_sensor.html">Ground Truth Sensor.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydrodynamics_plugin.html">Hydrodynamics Plugin.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="random_camera_plugin.html">Random Camera Plugin.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smooth_camera_plugin.html">Smooth Camera Plugin.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thruster_driver_plugin.html">Thruster Driver Plugin.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_gazebo_launch.html">Test Gazebo Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_underwater_camera_launch.html">Test Underwater Camera Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounding_box_image_saver.html">Bounding Box Image Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clean_data.html">Clean Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train_yolo.html">Train Yolo</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_object_recognition.html">Triton Object Recognition</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tiny_yolov3_launch.html">Tiny Yolov3 Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiny_yolov4_launch.html">Tiny Yolov4 Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiny_yolov4_realsense_launch.html">Tiny Yolov4 Realsense Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_recognizer.html">Object Recognizer.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_object_recognition_launch.html">Test Object Recognition Launch</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_pid_controller.html">Triton Pid Controller</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="pid.html">Pid.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="triton_pid_controller_launch.html">Triton Pid Controller Launch</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_pipeline.html">Triton Pipeline</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="camera1.html">Camera1.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camera1_info.html">Camera1 Info.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camera2.html">Camera2.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camera2_info.html">Camera2 Info.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">Example.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_sequence.html">Example Sequence.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imu_filter.html">Imu Filter.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_sequence.html">Pipeline Sequence.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="task_gate_search.html">Task Gate Search.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="task_gate_yolo.html">Task Gate Yolo.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cameras_launch.html">Cameras Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_launch.html">Pipeline Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_manager_launch.html">Pipeline Manager Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pool_testing_jetson_launch.html">Pool Testing Jetson Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pool_testing_surface_launch.html">Pool Testing Surface Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pool_testing_triton_mini.html">Pool Testing Triton Mini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pool_testing_triton_mini_auto.html">Pool Testing Triton Mini Auto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pool_testing_triton_mini_route.html">Pool Testing Triton Mini Route</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pool_testing_triton_mini_teleop.html">Pool Testing Triton Mini Teleop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pool_testing_triton_mini_thrust.html">Pool Testing Triton Mini Thrust</a></li>
+<li class="toctree-l2"><a class="reference internal" href="surface_testing_triton_mini.html">Surface Testing Triton Mini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="surface_testing_triton_mini_laptop.html">Surface Testing Triton Mini Laptop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teensy_test_launch.html">Teensy Test Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thruster_testing.html">Thruster Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_bad_yaml.html">Test Bad Yaml.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_comp_pack_mismatch.html">Test Comp Pack Mismatch.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_no_namespace.html">Test No Namespace.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_no_param.html">Test No Param.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_param_mismatch.html">Test Param Mismatch.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_run_comp_not_valid.html">Test Run Comp Not Valid.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_run_pkg_not_valid.html">Test Run Pkg Not Valid.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_something.html">Test Something.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_params.html">Load Params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_manager.html">Pipeline Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_sequence_manager.html">Pipeline Sequence Manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_teleop.html">Triton Teleop</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_teleop_launch.html">Keyboard Teleop Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_teleop.html">Keyboard Teleop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_publisher.html">Key Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sim_thrust_mapper.html">Sim Thrust Mapper</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_vision_utils.html">Triton Vision Utils</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="contour_features.html">Contour Features.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_detector.html">Object Detector.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown_guide.html">Misc</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ubc-subbots/subbots_docs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ubc-subbots/subbots_docs/issues/new?title=Issue%20on%20page%20%2Fchapter_list/state_estimator_config_IMU_only.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter_list/state_estimator_config_IMU_only.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>state_estimator_config_IMU_only.md</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="state-estimator-config-imu-only-md">
+<h1>state_estimator_config_IMU_only.md<a class="headerlink" href="#state-estimator-config-imu-only-md" title="Permalink to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reference</span>
+<span class="c1"># https://github.com/cra-ros-pkg/robot_localization/blob/foxy-devel/params/ukf.yaml</span>
+<span class="c1">### ukf config file ###</span>
+<span class="c1">#ukf_filter_node:</span>
+<span class="o">/</span><span class="n">triton</span><span class="o">/</span><span class="n">controls</span><span class="o">/</span><span class="n">ukf</span><span class="o">/</span><span class="n">state_estimator</span><span class="p">:</span>
+    <span class="n">ros__parameters</span><span class="p">:</span>
+<span class="c1"># The frequency, in Hz, at which the filter will output a position estimate. Note that the filter will not begin</span>
+<span class="c1"># computation until it receives at least one message from one of the inputs. It will then run continuously at the</span>
+<span class="c1"># frequency specified here, regardless of whether it receives more measurements. Defaults to 30 if unspecified.</span>
+        <span class="n">frequency</span><span class="p">:</span> <span class="mf">30.0</span>
+
+<span class="c1"># The period, in seconds, after which we consider a sensor to have timed out. In this event, we carry out a predict</span>
+<span class="c1"># cycle on the EKF without correcting it. This parameter can be thought of as the minimum frequency with which the</span>
+<span class="c1"># filter will generate new output. Defaults to 1 / frequency if not specified.</span>
+        <span class="n">sensor_timeout</span><span class="p">:</span> <span class="mf">0.1</span>
+
+<span class="c1"># ekf_localization_node and ukf_localization_node both use a 3D omnidirectional motion model. If this parameter is</span>
+<span class="c1"># set to true, no 3D information will be used in your state estimate. Use this if you are operating in a planar</span>
+<span class="c1"># environment and want to ignore the effect of small variations in the ground plane that might otherwise be detected</span>
+<span class="c1"># by, for example, an IMU. Defaults to false if unspecified.</span>
+        <span class="n">two_d_mode</span><span class="p">:</span> <span class="n">false</span>
+
+<span class="c1"># Use this parameter to provide an offset to the transform generated by ekf_localization_node. This can be used for</span>
+<span class="c1"># future dating the transform, which is required for interaction with some other packages. Defaults to 0.0 if</span>
+<span class="c1"># unspecified.</span>
+        <span class="n">transform_time_offset</span><span class="p">:</span> <span class="mf">0.0</span>
+
+<span class="c1"># Use this parameter to provide specify how long the tf listener should wait for a transform to become available. </span>
+<span class="c1"># Defaults to 0.0 if unspecified.</span>
+        <span class="n">transform_timeout</span><span class="p">:</span> <span class="mf">0.0</span>
+
+<span class="c1"># If you&#39;re having trouble, try setting this to true, and then echo the /diagnostics_agg topic to see if the node is</span>
+<span class="c1"># unhappy with any settings or data.</span>
+        <span class="n">print_diagnostics</span><span class="p">:</span> <span class="n">true</span>
+
+<span class="c1"># Debug settings. Not for the faint of heart. Outputs a ludicrous amount of information to the file specified by</span>
+<span class="c1"># debug_out_file. I hope you like matrices! Please note that setting this to true will have strongly deleterious</span>
+<span class="c1"># effects on the performance of the node. Defaults to false if unspecified.</span>
+        <span class="n">debug</span><span class="p">:</span> <span class="n">false</span>
+
+<span class="c1"># Defaults to &quot;robot_localization_debug.txt&quot; if unspecified. Please specify the full path.</span>
+        <span class="c1">#debug_out_file: /path/to/debug/file.txt</span>
+
+<span class="c1"># Whether we&#39;ll allow old measurements to cause a re-publication of the updated state</span>
+        <span class="n">permit_corrected_publication</span><span class="p">:</span> <span class="n">false</span>
+
+<span class="c1"># Whether to publish the acceleration state. Defaults to false if unspecified.</span>
+        <span class="n">publish_acceleration</span><span class="p">:</span> <span class="n">false</span>
+
+<span class="c1"># Whether to broadcast the transformation over the /tf topic. Defaults to true if unspecified.</span>
+        <span class="n">publish_tf</span><span class="p">:</span> <span class="n">true</span>
+
+<span class="c1"># REP-105 (http://www.ros.org/reps/rep-0105.html) specifies four principal coordinate frames: base_link, odom, map, and</span>
+<span class="c1"># earth. base_link is the coordinate frame that is affixed to the robot. Both odom and map are world-fixed frames.</span>
+<span class="c1"># The robot&#39;s position in the odom frame will drift over time, but is accurate in the short term and should be</span>
+<span class="c1"># continuous. The odom frame is therefore the best frame for executing local motion plans. The map frame, like the odom</span>
+<span class="c1"># frame, is a world-fixed coordinate frame, and while it contains the most globally accurate position estimate for your</span>
+<span class="c1"># robot, it is subject to discrete jumps, e.g., due to the fusion of GPS data or a correction from a map-based</span>
+<span class="c1"># localization node. The earth frame is used to relate multiple map frames by giving them a common reference frame.</span>
+<span class="c1"># ekf_localization_node and ukf_localization_node are not concerned with the earth frame.</span>
+<span class="c1"># Here is how to use the following settings:</span>
+<span class="c1"># 1. Set the map_frame, odom_frame, and base_link frames to the appropriate frame names for your system.</span>
+<span class="c1">#     1a. If your system does not have a map_frame, just remove it, and make sure &quot;world_frame&quot; is set to the value of</span>
+<span class="c1">#         odom_frame.</span>
+<span class="c1"># 2. If you are fusing continuous position data such as wheel encoder odometry, visual odometry, or IMU data, set</span>
+<span class="c1">#   &quot;world_frame&quot; to your odom_frame value. This is the default behavior for robot_localization&#39;s state estimation nodes.</span>
+<span class="c1"># 3. If you are fusing global absolute position data that is subject to discrete jumps (e.g., GPS or position updates</span>
+<span class="c1"># from landmark observations) then:</span>
+<span class="c1">#     3a. Set your &quot;world_frame&quot; to your map_frame value</span>
+<span class="c1">#     3b. MAKE SURE something else is generating the odom-&gt;base_link transform. Note that this can even be another state</span>
+<span class="c1">#         estimation node from robot_localization! However, that instance should *not* fuse the global data.</span>
+        <span class="n">map_frame</span><span class="p">:</span> <span class="nb">map</span>              <span class="c1"># Defaults to &quot;map&quot; if unspecified</span>
+        <span class="n">odom_frame</span><span class="p">:</span> <span class="n">odom</span>            <span class="c1"># Defaults to &quot;odom&quot; if unspecified</span>
+        <span class="n">base_link_frame</span><span class="p">:</span> <span class="n">base_link</span>  <span class="c1"># Defaults to &quot;base_link&quot; if unspecified</span>
+        <span class="n">world_frame</span><span class="p">:</span> <span class="n">odom</span>           <span class="c1"># Defaults to the value of odom_frame if unspecified</span>
+
+<span class="c1"># The filter accepts an arbitrary number of inputs from each input message type (nav_msgs/Odometry,</span>
+<span class="c1"># geometry_msgs/PoseWithCovarianceStamped, geometry_msgs/TwistWithCovarianceStamped,</span>
+<span class="c1"># sensor_msgs/Imu). To add an input, simply append the next number in the sequence to its &quot;base&quot; name, e.g., odom0,</span>
+<span class="c1"># odom1, twist0, twist1, imu0, imu1, imu2, etc. The value should be the topic name. These parameters obviously have no</span>
+<span class="c1"># default values, and must be specified.</span>
+        <span class="n">imu0</span><span class="p">:</span> <span class="o">/</span><span class="n">triton</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">imu</span><span class="o">/</span><span class="n">out</span>
+
+<span class="c1"># Each sensor reading updates some or all of the filter&#39;s state. These options give you greater control over which</span>
+<span class="c1"># values from each measurement are fed to the filter. For example, if you have an odometry message as input, but only</span>
+<span class="c1"># want to use its Z position value, then set the entire vector to false, except for the third entry. The order of the</span>
+<span class="c1"># values is x, y, z, roll, pitch, yaw, vx, vy, vz, vroll, vpitch, vyaw, ax, ay, az. Note that not some message types</span>
+<span class="c1"># do not provide some of the state variables estimated by the filter. For example, a TwistWithCovarianceStamped message</span>
+<span class="c1"># has no pose information, so the first six values would be meaningless in that case. Each vector defaults to all false</span>
+<span class="c1"># if unspecified, effectively making this parameter required for each sensor.</span>
+        <span class="n">imu0_config</span><span class="p">:</span> <span class="p">[</span><span class="n">false</span><span class="p">,</span> <span class="n">false</span><span class="p">,</span> <span class="n">false</span><span class="p">,</span>
+                      <span class="n">true</span><span class="p">,</span>  <span class="n">true</span><span class="p">,</span>  <span class="n">true</span><span class="p">,</span>
+                      <span class="n">false</span><span class="p">,</span> <span class="n">false</span><span class="p">,</span> <span class="n">false</span><span class="p">,</span>
+                      <span class="n">true</span><span class="p">,</span>  <span class="n">true</span><span class="p">,</span>  <span class="n">true</span><span class="p">,</span>
+                      <span class="n">true</span><span class="p">,</span>  <span class="n">true</span><span class="p">,</span>  <span class="n">true</span><span class="p">]</span>
+
+<span class="c1"># If you have high-frequency data or are running with a low frequency parameter value, then you may want to increase</span>
+<span class="c1"># the size of the subscription queue so that more measurements are fused.</span>
+        <span class="n">imu0_queue_size</span><span class="p">:</span> <span class="mi">5</span>
+
+<span class="c1"># [ADVANCED] Large messages in ROS can exhibit strange behavior when they arrive at a high frequency. This is a result</span>
+<span class="c1"># of Nagle&#39;s algorithm. This option tells the ROS subscriber to use the tcpNoDelay option, which disables Nagle&#39;s</span>
+<span class="c1"># algorithm.</span>
+        <span class="n">imu0_nodelay</span><span class="p">:</span> <span class="n">false</span>
+
+<span class="c1"># [ADVANCED] When measuring one pose variable with two sensors, a situation can arise in which both sensors under-</span>
+<span class="c1"># report their covariances. This can lead to the filter rapidly jumping back and forth between each measurement as they</span>
+<span class="c1"># arrive. In these cases, it often makes sense to (a) correct the measurement covariances, or (b) if velocity is also</span>
+<span class="c1"># measured by one of the sensors, let one sensor measure pose, and the other velocity. However, doing (a) or (b) isn&#39;t</span>
+<span class="c1"># always feasible, and so we expose the differential parameter. When differential mode is enabled, all absolute pose</span>
+<span class="c1"># data is converted to velocity data by differentiating the absolute pose measurements. These velocities are then</span>
+<span class="c1"># integrated as usual. NOTE: this only applies to sensors that provide pose measurements; setting differential to true</span>
+<span class="c1"># for twist measurements has no effect.</span>
+        <span class="n">imu0_differential</span><span class="p">:</span> <span class="n">false</span>
+
+<span class="c1"># [ADVANCED] When the node starts, if this parameter is true, then the first measurement is treated as a &quot;zero point&quot;</span>
+<span class="c1"># for all future measurements. While you can achieve the same effect with the differential paremeter, the key</span>
+<span class="c1"># difference is that the relative parameter doesn&#39;t cause the measurement to be converted to a velocity before</span>
+<span class="c1"># integrating it. If you simply want your measurements to start at 0 for a given sensor, set this to true.</span>
+        <span class="n">imu0_relative</span><span class="p">:</span> <span class="n">true</span>
+
+<span class="c1"># [ADVANCED] If your data is subject to outliers, use these threshold settings, expressed as Mahalanobis distances, to</span>
+<span class="c1"># control how far away from the current vehicle state a sensor measurement is permitted to be. Each defaults to</span>
+<span class="c1"># numeric_limits&lt;double&gt;::max() if unspecified. It is strongly recommended that these parameters be removed if not</span>
+<span class="c1"># required. Data is specified at the level of pose and twist variables, rather than for each variable in isolation.</span>
+<span class="c1"># For messages that have both pose and twist data, the parameter specifies to which part of the message we are applying</span>
+<span class="c1"># the thresholds.</span>
+        <span class="c1">#imu0_pose_rejection_threshold: 0.8                 # Note the difference in parameter names</span>
+        <span class="c1">#imu0_twist_rejection_threshold: 0.8                #</span>
+        <span class="c1">#imu0_linear_acceleration_rejection_threshold: 0.8  #</span>
+
+
+<span class="c1"># [ADVANCED] Some IMUs automatically remove acceleration due to gravity, and others don&#39;t. If yours doesn&#39;t, please set</span>
+<span class="c1"># this to true, and *make sure* your data conforms to REP-103, specifically, that the data is in ENU frame.</span>
+        <span class="n">imu0_remove_gravitational_acceleration</span><span class="p">:</span> <span class="n">true</span>
+
+<span class="c1"># [ADVANCED]  The EKF and UKF models follow a standard predict/correct cycle. During prediction, if there is no</span>
+<span class="c1"># acceleration reference, the velocity at time t+1 is simply predicted to be the same as the velocity at time t. During</span>
+<span class="c1"># correction, this predicted value is fused with the measured value to produce the new velocity estimate. This can be</span>
+<span class="c1"># problematic, as the final velocity will effectively be a weighted average of the old velocity and the new one. When</span>
+<span class="c1"># this velocity is the integrated into a new pose, the result can be sluggish covergence. This effect is especially</span>
+<span class="c1"># noticeable with LIDAR data during rotations. To get around it, users can try inflating the process_noise_covariance</span>
+<span class="c1"># for the velocity variable in question, or decrease the  variance of the variable in question in the measurement</span>
+<span class="c1"># itself. In addition, users can also take advantage of the control command being issued to the robot at the time we</span>
+<span class="c1"># make the prediction. If control is used, it will get converted into an acceleration term, which will be used during</span>
+<span class="c1"># predicition. Note that if an acceleration measurement for the variable in question is available from one of the</span>
+<span class="c1"># inputs, the control term will be ignored.</span>
+<span class="c1"># Whether or not we use the control input during predicition. Defaults to false.</span>
+        <span class="n">use_control</span><span class="p">:</span> <span class="n">false</span>
+<span class="c1"># Whether the input (assumed to be cmd_vel) is a geometry_msgs/Twist or geometry_msgs/TwistStamped message. Defaults to</span>
+<span class="c1"># false.</span>
+        <span class="n">stamped_control</span><span class="p">:</span> <span class="n">false</span>
+<span class="c1"># The last issued control command will be used in prediction for this period. Defaults to 0.2.</span>
+        <span class="n">control_timeout</span><span class="p">:</span> <span class="mf">0.2</span>
+<span class="c1"># Which velocities are being controlled. Order is vx, vy, vz, vroll, vpitch, vyaw.</span>
+        <span class="n">control_config</span><span class="p">:</span> <span class="p">[</span><span class="n">true</span><span class="p">,</span> <span class="n">true</span><span class="p">,</span> <span class="n">true</span><span class="p">,</span> <span class="n">true</span><span class="p">,</span> <span class="n">false</span><span class="p">,</span> <span class="n">true</span><span class="p">]</span>
+<span class="c1"># Places limits on how large the acceleration term will be. Should match your robot&#39;s kinematics.</span>
+        <span class="n">acceleration_limits</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">]</span>
+<span class="c1"># Acceleration and deceleration limits are not always the same for robots.</span>
+        <span class="n">deceleration_limits</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">]</span>
+<span class="c1"># If your robot cannot instantaneously reach its acceleration limit, the permitted change can be controlled with these</span>
+<span class="c1"># gains</span>
+        <span class="n">acceleration_gains</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
+<span class="c1"># If your robot cannot instantaneously reach its deceleration limit, the permitted change can be controlled with these</span>
+<span class="c1"># gains</span>
+        <span class="n">deceleration_gains</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="c1"># [ADVANCED] The process noise covariance matrix can be difficult to tune, and can vary for each application, so it is</span>
+<span class="c1"># exposed as a configuration parameter. This matrix represents the noise we add to the total error after each</span>
+<span class="c1"># prediction step. The better the omnidirectional motion model matches your system, the smaller these values can be.</span>
+<span class="c1"># However, if users find that a given variable is slow to converge, one approach is to increase the</span>
+<span class="c1"># process_noise_covariance diagonal value for the variable in question, which will cause the filter&#39;s predicted error</span>
+<span class="c1"># to be larger, which will cause the filter to trust the incoming measurement more during correction. The values are</span>
+<span class="c1"># ordered as x, y, z, roll, pitch, yaw, vx, vy, vz, vroll, vpitch, vyaw, ax, ay, az. Defaults to the matrix below if</span>
+<span class="c1"># unspecified.</span>
+        <span class="n">process_noise_covariance</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.025</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.025</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+                                   <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.015</span><span class="p">]</span>
+<span class="c1"># [ADVANCED] This represents the initial value for the state estimate error covariance matrix. Setting a diagonal</span>
+<span class="c1"># value (variance) to a large value will result in rapid convergence for initial measurements of the variable in</span>
+<span class="c1"># question. Users should take care not to use large values for variables that will not be measured directly. The values</span>
+<span class="c1"># are ordered as x, y, z, roll, pitch, yaw, vx, vy, vz, vroll, vpitch, vyaw, ax, ay, az. Defaults to the matrix below</span>
+<span class="c1">#if unspecified.</span>
+        <span class="n">initial_estimate_covariance</span><span class="p">:</span> <span class="p">[</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">,</span>  <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">1e-9</span><span class="p">,</span>  <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">1e-9</span><span class="p">,</span>  <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+                                      <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>     <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">0.0</span><span class="p">,</span>    <span class="mf">1e-9</span><span class="p">]</span>
+
+<span class="c1"># [ADVANCED, UKF ONLY] The alpha and kappa variables control the spread of the sigma points. Unless you are familiar</span>
+<span class="c1"># with UKFs, it&#39;s probably a good idea to leave these alone.</span>
+<span class="c1"># Defaults to 0.001 if unspecified.</span>
+        <span class="n">alpha</span><span class="p">:</span> <span class="mf">0.001</span>
+<span class="c1"># Defaults to 0 if unspecified.</span>
+        <span class="n">kappa</span><span class="p">:</span> <span class="mf">0.0</span>
+
+<span class="c1"># [ADVANCED, UKF ONLY] The beta variable relates to the distribution of the state vector. Again, it&#39;s probably best to</span>
+<span class="c1"># leave this alone if you&#39;re uncertain. Defaults to 2 if unspecified.</span>
+        <span class="n">beta</span><span class="p">:</span> <span class="mf">2.0</span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter_list"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="state_estimator_config_GT_only.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">state_estimator_config_GT_only.md</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="thruster_config.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">thruster_config.md</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By UBC Subbots
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

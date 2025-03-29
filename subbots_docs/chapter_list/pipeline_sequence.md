@@ -1,0 +1,9 @@
+# pipeline_sequence.md
+
+```python
+/triton/pipeline_sequence_manager:
+  ros__parameters:
+    pipeline_sequence:
+    - task_gate_yolo
+
+```
