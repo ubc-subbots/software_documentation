@@ -7,7 +7,7 @@ chapters:
       - file: chapter_list/hardware_interaction/thruster_configuration
 
   - file: chapter_list/code/launch
-    title: Code
+    title: Launch Files
     sections:
       - file: chapter_list/code/trajectory_generator_launch
 
