@@ -1,0 +1,9 @@
+# params_two.md
+
+```python
+component_two:
+  ros__parameters:
+    example_param: 1
+    use_sim_time: false
+
+```

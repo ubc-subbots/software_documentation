@@ -1,0 +1,15 @@
+# task_gate_search.md
+
+```python
+/triton/pipeline_manager:
+  ros__parameters:
+    pipeline:
+      components:
+        - triton_gate::GateDetector
+      pkg_names: 
+        - triton_gate
+      param_files:
+        - ''
+      namespace: /triton
+    use_sim_time: false
+```
