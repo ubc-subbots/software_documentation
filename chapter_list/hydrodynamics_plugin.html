@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>hydrodynamics_plugin.md &#8212; Software Documentation</title>
   
@@ -15,49 +14,49 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter_list/hydrodynamics_plugin';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -72,27 +71,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -114,8 +109,13 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -139,6 +139,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../intro.html">
   
@@ -160,7 +162,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -178,19 +180,19 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="hardware_interaction/connect.html">Hardware Connection</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="hardware_interaction/connect.html">Hardware Connection</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="hardware_interaction/thruster_configuration.html">Thruster Configuration</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="code/launch.html">Launch Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="code/launch.html">Launch Files</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="code/trajectory_generator_launch.html">trajectory_generator_launch.py</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_bringup.html">Triton Bringup</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_bringup.html">Triton Bringup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="teleop_sim_bringup_launch.html">Teleop Sim Bringup Launch</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_controls.html">Triton Controls</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_controls.html">Triton Controls</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="state_estimator_config.html">state_estimator_config.md</a></li>
 <li class="toctree-l2"><a class="reference internal" href="state_estimator_config_GT_only.html">state_estimator_config_GT_only.md</a></li>
 <li class="toctree-l2"><a class="reference internal" href="state_estimator_config_IMU_only.html">state_estimator_config_IMU_only.md</a></li>
@@ -210,8 +212,8 @@
 <li class="toctree-l2"><a class="reference internal" href="predetermined_thrust.html">predetermined_thrust.md</a></li>
 <li class="toctree-l2"><a class="reference internal" href="waypoint_marker_tester.html">waypoint_marker_tester.md</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_example.html">Triton Example</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_example.html">Triton Example</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="params_one.html">Params One.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="params_two.html">Params Two.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="example_launch.html">Example Launch</a></li>
@@ -219,13 +221,13 @@
 <li class="toctree-l2"><a class="reference internal" href="component_two.html">Component Two.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="test_example_launch.html">Test Example Launch</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_gate.html">Triton Gate</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_gate.html">Triton Gate</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gate_detector_launch.html">Gate Detector Launch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gate_detector.html">Gate Detector.</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="triton_gazebo.html">Triton Gazebo</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="triton_gazebo.html">Triton Gazebo</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="underwater_camera.html">Underwater Camera.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo_utils.html">Gazebo Utils.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gate_navigation_test.html">Gate Navigation Test</a></li>
@@ -253,21 +255,21 @@
 <li class="toctree-l2"><a class="reference internal" href="clean_data.html">Clean Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="train_yolo.html">Train Yolo</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_object_recognition.html">Triton Object Recognition</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_object_recognition.html">Triton Object Recognition</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="tiny_yolov3_launch.html">Tiny Yolov3 Launch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tiny_yolov4_launch.html">Tiny Yolov4 Launch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tiny_yolov4_realsense_launch.html">Tiny Yolov4 Realsense Launch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="object_recognizer.html">Object Recognizer.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="test_object_recognition_launch.html">Test Object Recognition Launch</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_pid_controller.html">Triton Pid Controller</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_pid_controller.html">Triton Pid Controller</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="pid.html">Pid.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="triton_pid_controller_launch.html">Triton Pid Controller Launch</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_pipeline.html">Triton Pipeline</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_pipeline.html">Triton Pipeline</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="camera1.html">Camera1.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="camera1_info.html">Camera1 Info.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="camera2.html">Camera2.Y</a></li>
@@ -304,19 +306,19 @@
 <li class="toctree-l2"><a class="reference internal" href="pipeline_manager.html">Pipeline Manager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pipeline_sequence_manager.html">Pipeline Sequence Manager</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_teleop.html">Triton Teleop</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_teleop.html">Triton Teleop</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="keyboard_teleop_launch.html">Keyboard Teleop Launch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="keyboard_teleop.html">Keyboard Teleop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="key_publisher.html">Key Publisher</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sim_thrust_mapper.html">Sim Thrust Mapper</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_vision_utils.html">Triton Vision Utils</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_vision_utils.html">Triton Vision Utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="contour_features.html">Contour Features.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="object_detector.html">Object Detector.</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../markdown_guide.html">Misc</a></li>
 </ul>
 
@@ -333,7 +335,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -342,14 +344,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -474,10 +476,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -485,7 +487,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -516,275 +518,275 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hydrodynamics-plugin-md">
-<h1>hydrodynamics_plugin.md<a class="headerlink" href="#hydrodynamics-plugin-md" title="Permalink to this heading">#</a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>#include &quot;triton_gazebo/hydrodynamics_plugin.hpp&quot;
+<h1>hydrodynamics_plugin.md<a class="headerlink" href="#hydrodynamics-plugin-md" title="Link to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &quot;triton_gazebo/hydrodynamics_plugin.hpp&quot;</span>
 
-namespace triton_gazebo
-{
+<span class="n">namespace</span> <span class="n">triton_gazebo</span>
+<span class="p">{</span>
 
-    HydrodynamicsPlugin::HydrodynamicsPlugin() {}
-
-
-    HydrodynamicsPlugin::~HydrodynamicsPlugin() {}
+    <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">HydrodynamicsPlugin</span><span class="p">()</span> <span class="p">{}</span>
 
 
-    void HydrodynamicsPlugin::Load(gazebo::physics::ModelPtr _model, sdf::ElementPtr _sdf)
-    {
-        this-&gt;model = _model;
+    <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="o">~</span><span class="n">HydrodynamicsPlugin</span><span class="p">()</span> <span class="p">{}</span>
 
-        // Get params that apply to the simulation world
-        GetWorldParameters(this-&gt;model-&gt;GetWorld()-&gt;SDF());
 
-        // Get params for model dynamics and hydro model
-        GetModelParameters(this-&gt;model-&gt;GetSDF());
+    <span class="n">void</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">Load</span><span class="p">(</span><span class="n">gazebo</span><span class="p">::</span><span class="n">physics</span><span class="p">::</span><span class="n">ModelPtr</span> <span class="n">_model</span><span class="p">,</span> <span class="n">sdf</span><span class="p">::</span><span class="n">ElementPtr</span> <span class="n">_sdf</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">model</span> <span class="o">=</span> <span class="n">_model</span><span class="p">;</span>
 
-        // Get model&#39;s total mass
-        this-&gt;mass = 0;
-        std::vector&lt;gazebo::physics::LinkPtr&gt; all_links = this-&gt;model-&gt;GetLinks();
-        for (int i = 0; i &lt; (int)all_links.size(); i++)
-        {
-            this-&gt;mass += all_links[i]-&gt;GetInertial()-&gt;Mass();
-        }
+        <span class="o">//</span> <span class="n">Get</span> <span class="n">params</span> <span class="n">that</span> <span class="n">apply</span> <span class="n">to</span> <span class="n">the</span> <span class="n">simulation</span> <span class="n">world</span>
+        <span class="n">GetWorldParameters</span><span class="p">(</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">model</span><span class="o">-&gt;</span><span class="n">GetWorld</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SDF</span><span class="p">());</span>
 
-        this-&gt;DLinForwardSpeed.setZero();
+        <span class="o">//</span> <span class="n">Get</span> <span class="n">params</span> <span class="k">for</span> <span class="n">model</span> <span class="n">dynamics</span> <span class="ow">and</span> <span class="n">hydro</span> <span class="n">model</span>
+        <span class="n">GetModelParameters</span><span class="p">(</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">model</span><span class="o">-&gt;</span><span class="n">GetSDF</span><span class="p">());</span>
 
-        this-&gt;Connect();
-    }
+        <span class="o">//</span> <span class="n">Get</span> <span class="n">model</span><span class="s1">&#39;s total mass</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">mass</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">gazebo</span><span class="p">::</span><span class="n">physics</span><span class="p">::</span><span class="n">LinkPtr</span><span class="o">&gt;</span> <span class="n">all_links</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">model</span><span class="o">-&gt;</span><span class="n">GetLinks</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="n">all_links</span><span class="o">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">this</span><span class="o">-&gt;</span><span class="n">mass</span> <span class="o">+=</span> <span class="n">all_links</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">GetInertial</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">Mass</span><span class="p">();</span>
+        <span class="p">}</span>
 
-    // Return a status flag if needed later on
-    bool HydrodynamicsPlugin::GetWorldParameters(sdf::ElementPtr world_sdf)
-    {
-        bool status = true;
-        Eigen::Vector6d gravity_eig;
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">DLinForwardSpeed</span><span class="o">.</span><span class="n">setZero</span><span class="p">();</span>
+
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">Connect</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="n">Return</span> <span class="n">a</span> <span class="n">status</span> <span class="n">flag</span> <span class="k">if</span> <span class="n">needed</span> <span class="n">later</span> <span class="n">on</span>
+    <span class="nb">bool</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">GetWorldParameters</span><span class="p">(</span><span class="n">sdf</span><span class="p">::</span><span class="n">ElementPtr</span> <span class="n">world_sdf</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nb">bool</span> <span class="n">status</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">gravity_eig</span><span class="p">;</span>
     
-        this-&gt;fluid_density = GetSdfElement&lt;double&gt;(&amp;status, world_sdf, &quot;fluid_density&quot;, 1028.00);
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">fluid_density</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">world_sdf</span><span class="p">,</span> <span class="s2">&quot;fluid_density&quot;</span><span class="p">,</span> <span class="mf">1028.00</span><span class="p">);</span>
 
-        gravity_eig &lt;&lt; 0.00, 0.00, -9.81, 0.00, 0.00, 0.00;
-        gravity_eig = GetSdfVector(&amp;status, world_sdf, &quot;gravity&quot;, gravity_eig);
+        <span class="n">gravity_eig</span> <span class="o">&lt;&lt;</span> <span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.81</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">;</span>
+        <span class="n">gravity_eig</span> <span class="o">=</span> <span class="n">GetSdfVector</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">world_sdf</span><span class="p">,</span> <span class="s2">&quot;gravity&quot;</span><span class="p">,</span> <span class="n">gravity_eig</span><span class="p">);</span>
 
-        this-&gt;gravity = ignition::math::Vector3d(gravity_eig[0], gravity_eig[1], gravity_eig[2]);
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">gravity</span> <span class="o">=</span> <span class="n">ignition</span><span class="p">::</span><span class="n">math</span><span class="p">::</span><span class="n">Vector3d</span><span class="p">(</span><span class="n">gravity_eig</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">gravity_eig</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">gravity_eig</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 
-        return status;
-    }
-
-
-    bool HydrodynamicsPlugin::GetModelParameters(sdf::ElementPtr model_sdf)
-    {
-        sdf::ElementPtr hydro_model = model_sdf-&gt;GetElement(&quot;hydrodynamic_model&quot;);
-        bool status = true;
-
-        std::string base_link = GetSdfElement&lt;std::string&gt;(&amp;status, model_sdf, &quot;base_link&quot;, &quot;&quot;);
-        if (!status)
-        {
-            gzerr &lt;&lt; &quot;Base link not specified! Exiting.\n&quot;;
-            exit(1);
-        }
-        this-&gt;frame = model-&gt;GetLink(base_link);
-
-        // Added mass manipulators
-        this-&gt;scalingAddedMass = GetSdfElement&lt;double&gt;(&amp;status, hydro_model, &quot;scalingAddedMass&quot;, 1.00);
-        this-&gt;offsetAddedMass = GetSdfElement&lt;double&gt;(&amp;status, hydro_model, &quot;offsetAddedMass&quot;, 0.00);
-
-        // Added mass parameters, assume zero if not specified 
-        this-&gt;added_mass = GetSdfMatrix(&amp;status, hydro_model, &quot;added_mass&quot;);
-
-        // Linear damping manipulators 
-        this-&gt;scalingDamping = GetSdfElement&lt;double&gt;(&amp;status, hydro_model, &quot;scalingDamping&quot;, 1.00);
-        this-&gt;offsetLinearDamping = GetSdfElement&lt;double&gt;(&amp;status, hydro_model, &quot;offetLineaDamping&quot;, 0.00);
-        this-&gt;offsetLinForwardSpeedDamping = GetSdfElement&lt;double&gt;(&amp;status, hydro_model, &quot;offsetLinForwardSpeedDamping&quot;, 0.00);
-
-        // Non-linear damping manipulators 
-        this-&gt;offsetNonLinDamping = GetSdfElement&lt;double&gt;(&amp;status, hydro_model, &quot;offsetNonLinDamping&quot;, 0.00);
-
-        this-&gt;volume = GetSdfElement&lt;double&gt;(&amp;status, model_sdf, &quot;volume&quot;);
-        if (!status)
-        {
-            gzerr &lt;&lt; &quot;Model volume not specified.\n&quot;;
-            exit(1);
-        }
-
-        // Make no assumptions for CoB
-        Eigen::Vector6d CoB_eig = GetSdfVector(&amp;status, model_sdf, &quot;center_of_buoyancy&quot;);
-        if (!status)
-        {
-            gzerr &lt;&lt; &quot;Center of Buoyancy not specified.\n&quot;;
-            exit(1);
-        }
-        // Calculate CoB relative to CoM rather than model origin
-        ignition::math::Vector3d CoM = frame-&gt;GetInertial()-&gt;Pose().Pos();
-        this-&gt;rel_CoB = ignition::math::Vector3d(CoB_eig[0], CoB_eig[1], CoB_eig[2]) - CoM;
-
-        // For now we will approximate linear damping as a diagnol matrix
-        Eigen::Vector6d linear_damping_vec = GetSdfVector(&amp;status, hydro_model, &quot;linear_damping&quot;);
-        this-&gt;linear_damping = ToDiagonalMatrix(linear_damping_vec);
-
-        // For now we will approximate non-linear damping as a diagnol matrix
-        this-&gt;quadratic_damping = GetSdfVector(&amp;status, hydro_model, &quot;quadratic_damping&quot;);
-        this-&gt;non_linear_damping = ToDiagonalMatrix(quadratic_damping);
-
-        this-&gt;scalingBuoyancy = GetSdfElement&lt;double&gt;(&amp;status, hydro_model, &quot;scalingBuoyancy&quot;, 1.00);
-        this-&gt;is_neutrally_buoyant = GetSdfElement&lt;bool&gt;(&amp;status, model_sdf, &quot;neutrally_buoyant&quot;, false);
-
-        return status;
-    }
+        <span class="k">return</span> <span class="n">status</span><span class="p">;</span>
+    <span class="p">}</span>
 
 
-    void HydrodynamicsPlugin::Connect()
-    {
-        updateConnection_ = gazebo::event::Events::ConnectWorldUpdateBegin(
-            std::bind(&amp;HydrodynamicsPlugin::Update, this));
-    }
+    <span class="nb">bool</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">GetModelParameters</span><span class="p">(</span><span class="n">sdf</span><span class="p">::</span><span class="n">ElementPtr</span> <span class="n">model_sdf</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">sdf</span><span class="p">::</span><span class="n">ElementPtr</span> <span class="n">hydro_model</span> <span class="o">=</span> <span class="n">model_sdf</span><span class="o">-&gt;</span><span class="n">GetElement</span><span class="p">(</span><span class="s2">&quot;hydrodynamic_model&quot;</span><span class="p">);</span>
+        <span class="nb">bool</span> <span class="n">status</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+
+        <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">base_link</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">model_sdf</span><span class="p">,</span> <span class="s2">&quot;base_link&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="n">status</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">gzerr</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;Base link not specified! Exiting.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+            <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">frame</span> <span class="o">=</span> <span class="n">model</span><span class="o">-&gt;</span><span class="n">GetLink</span><span class="p">(</span><span class="n">base_link</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Added</span> <span class="n">mass</span> <span class="n">manipulators</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">scalingAddedMass</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">hydro_model</span><span class="p">,</span> <span class="s2">&quot;scalingAddedMass&quot;</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">offsetAddedMass</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">hydro_model</span><span class="p">,</span> <span class="s2">&quot;offsetAddedMass&quot;</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Added</span> <span class="n">mass</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">assume</span> <span class="n">zero</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">specified</span> 
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">added_mass</span> <span class="o">=</span> <span class="n">GetSdfMatrix</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">hydro_model</span><span class="p">,</span> <span class="s2">&quot;added_mass&quot;</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Linear</span> <span class="n">damping</span> <span class="n">manipulators</span> 
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">scalingDamping</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">hydro_model</span><span class="p">,</span> <span class="s2">&quot;scalingDamping&quot;</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">offsetLinearDamping</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">hydro_model</span><span class="p">,</span> <span class="s2">&quot;offetLineaDamping&quot;</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">offsetLinForwardSpeedDamping</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">hydro_model</span><span class="p">,</span> <span class="s2">&quot;offsetLinForwardSpeedDamping&quot;</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Non</span><span class="o">-</span><span class="n">linear</span> <span class="n">damping</span> <span class="n">manipulators</span> 
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">offsetNonLinDamping</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">hydro_model</span><span class="p">,</span> <span class="s2">&quot;offsetNonLinDamping&quot;</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">);</span>
+
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">volume</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">model_sdf</span><span class="p">,</span> <span class="s2">&quot;volume&quot;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="n">status</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">gzerr</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;Model volume not specified.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+            <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="o">//</span> <span class="n">Make</span> <span class="n">no</span> <span class="n">assumptions</span> <span class="k">for</span> <span class="n">CoB</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">CoB_eig</span> <span class="o">=</span> <span class="n">GetSdfVector</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">model_sdf</span><span class="p">,</span> <span class="s2">&quot;center_of_buoyancy&quot;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="n">status</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">gzerr</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;Center of Buoyancy not specified.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+            <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="o">//</span> <span class="n">Calculate</span> <span class="n">CoB</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">CoM</span> <span class="n">rather</span> <span class="n">than</span> <span class="n">model</span> <span class="n">origin</span>
+        <span class="n">ignition</span><span class="p">::</span><span class="n">math</span><span class="p">::</span><span class="n">Vector3d</span> <span class="n">CoM</span> <span class="o">=</span> <span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetInertial</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">Pose</span><span class="p">()</span><span class="o">.</span><span class="n">Pos</span><span class="p">();</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">rel_CoB</span> <span class="o">=</span> <span class="n">ignition</span><span class="p">::</span><span class="n">math</span><span class="p">::</span><span class="n">Vector3d</span><span class="p">(</span><span class="n">CoB_eig</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">CoB_eig</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">CoB_eig</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">-</span> <span class="n">CoM</span><span class="p">;</span>
+
+        <span class="o">//</span> <span class="n">For</span> <span class="n">now</span> <span class="n">we</span> <span class="n">will</span> <span class="n">approximate</span> <span class="n">linear</span> <span class="n">damping</span> <span class="k">as</span> <span class="n">a</span> <span class="n">diagnol</span> <span class="n">matrix</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">linear_damping_vec</span> <span class="o">=</span> <span class="n">GetSdfVector</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">hydro_model</span><span class="p">,</span> <span class="s2">&quot;linear_damping&quot;</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">linear_damping</span> <span class="o">=</span> <span class="n">ToDiagonalMatrix</span><span class="p">(</span><span class="n">linear_damping_vec</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">For</span> <span class="n">now</span> <span class="n">we</span> <span class="n">will</span> <span class="n">approximate</span> <span class="n">non</span><span class="o">-</span><span class="n">linear</span> <span class="n">damping</span> <span class="k">as</span> <span class="n">a</span> <span class="n">diagnol</span> <span class="n">matrix</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">quadratic_damping</span> <span class="o">=</span> <span class="n">GetSdfVector</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">hydro_model</span><span class="p">,</span> <span class="s2">&quot;quadratic_damping&quot;</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">non_linear_damping</span> <span class="o">=</span> <span class="n">ToDiagonalMatrix</span><span class="p">(</span><span class="n">quadratic_damping</span><span class="p">);</span>
+
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">scalingBuoyancy</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">hydro_model</span><span class="p">,</span> <span class="s2">&quot;scalingBuoyancy&quot;</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">is_neutrally_buoyant</span> <span class="o">=</span> <span class="n">GetSdfElement</span><span class="o">&lt;</span><span class="nb">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span> <span class="n">model_sdf</span><span class="p">,</span> <span class="s2">&quot;neutrally_buoyant&quot;</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="n">status</span><span class="p">;</span>
+    <span class="p">}</span>
 
 
-    void HydrodynamicsPlugin::Update()
-    {
-        Eigen::Vector6d velocity = this-&gt;GetVelocityVector();
-        Eigen::Vector6d acceleration = this-&gt;GetAccelerationVector();
-        Eigen::Vector6d velRel = ToNED(velocity);
-
-        // Update added Coriolis matrix
-        this-&gt;ComputeAddedCoriolisMatrix(velRel, this-&gt;added_mass, this-&gt;coriolis_matrix);
-
-        // Update damping matrix
-        this-&gt;ComputeDampingMatrix(velRel, this-&gt;damping_matrix);
-
-        Eigen::Matrix6d Ma = this-&gt;GetAddedMass();
-
-        // We can now compute the additional forces/torques due to thisdynamic
-        // effects based on Eq. 8.136 on p.222 of Fossen: Handbook of Marine Craft ...
-
-        // Damping forces and torques
-        Eigen::Vector6d damping = -this-&gt;damping_matrix * velRel;
-
-        // Added-mass forces and torques
-        Eigen::Vector6d added = -Ma * acceleration;
-
-        // Added Coriolis term
-        Eigen::Vector6d cor = -this-&gt;coriolis_matrix * velRel;
-
-        // All additional (compared to standard rigid body) Fossen terms combined.
-        Eigen::Vector6d tau = damping + added + cor;
-
-        GZ_ASSERT(!std::isnan(tau.norm()), &quot;Hydrodynamic forces vector is nan&quot;);
-
-        if (!std::isnan(tau.norm()))
-        {
-            this-&gt;SetWrenchVector(FromNED(tau));
-        }
-
-        this-&gt;ApplyBuoyancyForce();
-    }
+    <span class="n">void</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">Connect</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">updateConnection_</span> <span class="o">=</span> <span class="n">gazebo</span><span class="p">::</span><span class="n">event</span><span class="p">::</span><span class="n">Events</span><span class="p">::</span><span class="n">ConnectWorldUpdateBegin</span><span class="p">(</span>
+            <span class="n">std</span><span class="p">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">Update</span><span class="p">,</span> <span class="n">this</span><span class="p">));</span>
+    <span class="p">}</span>
 
 
-    Eigen::Vector6d HydrodynamicsPlugin::GetVelocityVector()
-    {
-        ignition::math::Vector3d linear_vel = this-&gt;frame-&gt;RelativeLinearVel();
-        ignition::math::Vector3d angular_vel = this-&gt;frame-&gt;RelativeAngularVel();
-        Eigen::Vector6d velocity;
+    <span class="n">void</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">Update</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">velocity</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">GetVelocityVector</span><span class="p">();</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">acceleration</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">GetAccelerationVector</span><span class="p">();</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">velRel</span> <span class="o">=</span> <span class="n">ToNED</span><span class="p">(</span><span class="n">velocity</span><span class="p">);</span>
 
-        // Convert velocity into Eigen library vector
-        velocity &lt;&lt; linear_vel.X(),
-                    linear_vel.Y(),
-                    linear_vel.Z(),
-                    angular_vel.X(),
-                    angular_vel.Y(),
-                    angular_vel.Z();
+        <span class="o">//</span> <span class="n">Update</span> <span class="n">added</span> <span class="n">Coriolis</span> <span class="n">matrix</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">ComputeAddedCoriolisMatrix</span><span class="p">(</span><span class="n">velRel</span><span class="p">,</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">added_mass</span><span class="p">,</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">coriolis_matrix</span><span class="p">);</span>
 
-        return velocity;
-    }
+        <span class="o">//</span> <span class="n">Update</span> <span class="n">damping</span> <span class="n">matrix</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">ComputeDampingMatrix</span><span class="p">(</span><span class="n">velRel</span><span class="p">,</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">damping_matrix</span><span class="p">);</span>
 
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix6d</span> <span class="n">Ma</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">GetAddedMass</span><span class="p">();</span>
 
-    Eigen::Vector6d HydrodynamicsPlugin::GetAccelerationVector()
-    {
-        ignition::math::Vector3d linear_acc = this-&gt;frame-&gt;RelativeLinearAccel();
-        ignition::math::Vector3d angular_acc = this-&gt;frame-&gt;RelativeAngularAccel();
-        Eigen::Vector6d acceleration;
+        <span class="o">//</span> <span class="n">We</span> <span class="n">can</span> <span class="n">now</span> <span class="n">compute</span> <span class="n">the</span> <span class="n">additional</span> <span class="n">forces</span><span class="o">/</span><span class="n">torques</span> <span class="n">due</span> <span class="n">to</span> <span class="n">thisdynamic</span>
+        <span class="o">//</span> <span class="n">effects</span> <span class="n">based</span> <span class="n">on</span> <span class="n">Eq</span><span class="o">.</span> <span class="mf">8.136</span> <span class="n">on</span> <span class="n">p</span><span class="mf">.222</span> <span class="n">of</span> <span class="n">Fossen</span><span class="p">:</span> <span class="n">Handbook</span> <span class="n">of</span> <span class="n">Marine</span> <span class="n">Craft</span> <span class="o">...</span>
 
-        // Convert acceleration into Eigen library vector
-        acceleration &lt;&lt; linear_acc.X(),
-                        linear_acc.Y(),
-                        linear_acc.Z(),
-                        angular_acc.X(),
-                        angular_acc.Y(),
-                        angular_acc.Z();
+        <span class="o">//</span> <span class="n">Damping</span> <span class="n">forces</span> <span class="ow">and</span> <span class="n">torques</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">damping</span> <span class="o">=</span> <span class="o">-</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">damping_matrix</span> <span class="o">*</span> <span class="n">velRel</span><span class="p">;</span>
 
-        return acceleration;
-    }
+        <span class="o">//</span> <span class="n">Added</span><span class="o">-</span><span class="n">mass</span> <span class="n">forces</span> <span class="ow">and</span> <span class="n">torques</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">added</span> <span class="o">=</span> <span class="o">-</span><span class="n">Ma</span> <span class="o">*</span> <span class="n">acceleration</span><span class="p">;</span>
 
+        <span class="o">//</span> <span class="n">Added</span> <span class="n">Coriolis</span> <span class="n">term</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">cor</span> <span class="o">=</span> <span class="o">-</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">coriolis_matrix</span> <span class="o">*</span> <span class="n">velRel</span><span class="p">;</span>
 
-    void HydrodynamicsPlugin::SetWrenchVector(Eigen::Vector6d wrench)
-    {
-        ignition::math::Vector3d force(wrench(0), wrench(1), wrench(2));
-        ignition::math::Vector3d torque(wrench(3), wrench(4), wrench(5));
+        <span class="o">//</span> <span class="n">All</span> <span class="n">additional</span> <span class="p">(</span><span class="n">compared</span> <span class="n">to</span> <span class="n">standard</span> <span class="n">rigid</span> <span class="n">body</span><span class="p">)</span> <span class="n">Fossen</span> <span class="n">terms</span> <span class="n">combined</span><span class="o">.</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">damping</span> <span class="o">+</span> <span class="n">added</span> <span class="o">+</span> <span class="n">cor</span><span class="p">;</span>
 
-        frame-&gt;AddRelativeForce(force);
-        frame-&gt;AddRelativeTorque(torque);
-    }
+        <span class="n">GZ_ASSERT</span><span class="p">(</span><span class="err">!</span><span class="n">std</span><span class="p">::</span><span class="n">isnan</span><span class="p">(</span><span class="n">tau</span><span class="o">.</span><span class="n">norm</span><span class="p">()),</span> <span class="s2">&quot;Hydrodynamic forces vector is nan&quot;</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="n">std</span><span class="p">::</span><span class="n">isnan</span><span class="p">(</span><span class="n">tau</span><span class="o">.</span><span class="n">norm</span><span class="p">()))</span>
+        <span class="p">{</span>
+            <span class="n">this</span><span class="o">-&gt;</span><span class="n">SetWrenchVector</span><span class="p">(</span><span class="n">FromNED</span><span class="p">(</span><span class="n">tau</span><span class="p">));</span>
+        <span class="p">}</span>
+
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">ApplyBuoyancyForce</span><span class="p">();</span>
+    <span class="p">}</span>
 
 
-    void HydrodynamicsPlugin::ComputeAddedCoriolisMatrix(const Eigen::Vector6d&amp; _vel, const Eigen::Matrix6d&amp; _Ma, Eigen::Matrix6d &amp;_Ca) const
-    {
-        // This corresponds to eq. 6.43 on p. 120 in
-        // Fossen, Thor, &quot;Handbook of Marine Craft and Hydrodynamics and Motion
-        // Control&quot;, 2011
-        Eigen::Vector6d ab = this-&gt;GetAddedMass() * _vel;
-        Eigen::Matrix3d Sa = -1 * CrossProductOperator(ab.head&lt;3&gt;());
-        _Ca &lt;&lt; Eigen::Matrix3d::Zero(), Sa, 
-               Sa, -1 * CrossProductOperator(ab.tail&lt;3&gt;());
-    }
+    <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">GetVelocityVector</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">ignition</span><span class="p">::</span><span class="n">math</span><span class="p">::</span><span class="n">Vector3d</span> <span class="n">linear_vel</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">RelativeLinearVel</span><span class="p">();</span>
+        <span class="n">ignition</span><span class="p">::</span><span class="n">math</span><span class="p">::</span><span class="n">Vector3d</span> <span class="n">angular_vel</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">RelativeAngularVel</span><span class="p">();</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">velocity</span><span class="p">;</span>
+
+        <span class="o">//</span> <span class="n">Convert</span> <span class="n">velocity</span> <span class="n">into</span> <span class="n">Eigen</span> <span class="n">library</span> <span class="n">vector</span>
+        <span class="n">velocity</span> <span class="o">&lt;&lt;</span> <span class="n">linear_vel</span><span class="o">.</span><span class="n">X</span><span class="p">(),</span>
+                    <span class="n">linear_vel</span><span class="o">.</span><span class="n">Y</span><span class="p">(),</span>
+                    <span class="n">linear_vel</span><span class="o">.</span><span class="n">Z</span><span class="p">(),</span>
+                    <span class="n">angular_vel</span><span class="o">.</span><span class="n">X</span><span class="p">(),</span>
+                    <span class="n">angular_vel</span><span class="o">.</span><span class="n">Y</span><span class="p">(),</span>
+                    <span class="n">angular_vel</span><span class="o">.</span><span class="n">Z</span><span class="p">();</span>
+
+        <span class="k">return</span> <span class="n">velocity</span><span class="p">;</span>
+    <span class="p">}</span>
 
 
-    void HydrodynamicsPlugin::ComputeDampingMatrix(const Eigen::Vector6d&amp; _vel, Eigen::Matrix6d &amp;_D) const
-    {
-        // From Antonelli 2014: the viscosity of the fluid causes
-        // the presence of dissipative drag and lift forces on the
-        // body. A common simplification is to consider only linear
-        // and quadratic damping terms and group these terms in a
-        // matrix Drb
+    <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">GetAccelerationVector</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">ignition</span><span class="p">::</span><span class="n">math</span><span class="p">::</span><span class="n">Vector3d</span> <span class="n">linear_acc</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">RelativeLinearAccel</span><span class="p">();</span>
+        <span class="n">ignition</span><span class="p">::</span><span class="n">math</span><span class="p">::</span><span class="n">Vector3d</span> <span class="n">angular_acc</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">RelativeAngularAccel</span><span class="p">();</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">acceleration</span><span class="p">;</span>
 
-        _D.setZero();
+        <span class="o">//</span> <span class="n">Convert</span> <span class="n">acceleration</span> <span class="n">into</span> <span class="n">Eigen</span> <span class="n">library</span> <span class="n">vector</span>
+        <span class="n">acceleration</span> <span class="o">&lt;&lt;</span> <span class="n">linear_acc</span><span class="o">.</span><span class="n">X</span><span class="p">(),</span>
+                        <span class="n">linear_acc</span><span class="o">.</span><span class="n">Y</span><span class="p">(),</span>
+                        <span class="n">linear_acc</span><span class="o">.</span><span class="n">Z</span><span class="p">(),</span>
+                        <span class="n">angular_acc</span><span class="o">.</span><span class="n">X</span><span class="p">(),</span>
+                        <span class="n">angular_acc</span><span class="o">.</span><span class="n">Y</span><span class="p">(),</span>
+                        <span class="n">angular_acc</span><span class="o">.</span><span class="n">Z</span><span class="p">();</span>
 
-        _D = -1 * (this-&gt;linear_damping + this-&gt;offsetLinearDamping * Eigen::Matrix6d::Identity()) -
-                    _vel[0] * (this-&gt;DLinForwardSpeed +
-                    this-&gt;offsetLinForwardSpeedDamping * Eigen::Matrix6d::Identity());
-
-        // Nonlinear damping matrix is considered as a diagonal matrix
-        for (int i = 0; i &lt; MAX_DIMENSION; i++)
-        {
-            _D(i, i) += -1 * (this-&gt;non_linear_damping(i, i) + this-&gt;offsetNonLinDamping) * std::fabs(_vel[i]);
-        }
-        _D *= this-&gt;scalingDamping;
-    }
+        <span class="k">return</span> <span class="n">acceleration</span><span class="p">;</span>
+    <span class="p">}</span>
 
 
-    Eigen::Matrix6d HydrodynamicsPlugin::GetAddedMass() const
-    {
-        Eigen::Matrix6d M_d = this-&gt;added_mass + this-&gt;offsetAddedMass * Eigen::Matrix6d::Identity();
+    <span class="n">void</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">SetWrenchVector</span><span class="p">(</span><span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">wrench</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">ignition</span><span class="p">::</span><span class="n">math</span><span class="p">::</span><span class="n">Vector3d</span> <span class="n">force</span><span class="p">(</span><span class="n">wrench</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">wrench</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">wrench</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+        <span class="n">ignition</span><span class="p">::</span><span class="n">math</span><span class="p">::</span><span class="n">Vector3d</span> <span class="n">torque</span><span class="p">(</span><span class="n">wrench</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">wrench</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">wrench</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
 
-        return this-&gt;scalingAddedMass * M_d;
-    }
+        <span class="n">frame</span><span class="o">-&gt;</span><span class="n">AddRelativeForce</span><span class="p">(</span><span class="n">force</span><span class="p">);</span>
+        <span class="n">frame</span><span class="o">-&gt;</span><span class="n">AddRelativeTorque</span><span class="p">(</span><span class="n">torque</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    // Constant vertical force on center of mass. 
-    void HydrodynamicsPlugin::ApplyBuoyancyForce()
-    {
-        double vol = this-&gt;volume;
-        double rho = this-&gt;fluid_density;
-        ignition::math::Vector3d buoyancy_force;
 
-        if (!this-&gt;is_neutrally_buoyant)
-        {
-            // the buoyant force: Fb = fluid_density * gravity * volume of fluid displaced
-            buoyancy_force = -rho * vol * this-&gt;gravity * this-&gt;scalingBuoyancy;
-        }
-        else
-        {
-            buoyancy_force = -this-&gt;mass * this-&gt;gravity;
-        }
+    <span class="n">void</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">ComputeAddedCoriolisMatrix</span><span class="p">(</span><span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span><span class="o">&amp;</span> <span class="n">_vel</span><span class="p">,</span> <span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix6d</span><span class="o">&amp;</span> <span class="n">_Ma</span><span class="p">,</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix6d</span> <span class="o">&amp;</span><span class="n">_Ca</span><span class="p">)</span> <span class="n">const</span>
+    <span class="p">{</span>
+        <span class="o">//</span> <span class="n">This</span> <span class="n">corresponds</span> <span class="n">to</span> <span class="n">eq</span><span class="o">.</span> <span class="mf">6.43</span> <span class="n">on</span> <span class="n">p</span><span class="o">.</span> <span class="mi">120</span> <span class="ow">in</span>
+        <span class="o">//</span> <span class="n">Fossen</span><span class="p">,</span> <span class="n">Thor</span><span class="p">,</span> <span class="s2">&quot;Handbook of Marine Craft and Hydrodynamics and Motion</span>
+        <span class="o">//</span> <span class="n">Control</span><span class="s2">&quot;, 2011</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span> <span class="n">ab</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">GetAddedMass</span><span class="p">()</span> <span class="o">*</span> <span class="n">_vel</span><span class="p">;</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix3d</span> <span class="n">Sa</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">CrossProductOperator</span><span class="p">(</span><span class="n">ab</span><span class="o">.</span><span class="n">head</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">());</span>
+        <span class="n">_Ca</span> <span class="o">&lt;&lt;</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix3d</span><span class="p">::</span><span class="n">Zero</span><span class="p">(),</span> <span class="n">Sa</span><span class="p">,</span> 
+               <span class="n">Sa</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">CrossProductOperator</span><span class="p">(</span><span class="n">ab</span><span class="o">.</span><span class="n">tail</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">());</span>
+    <span class="p">}</span>
 
-        this-&gt;frame-&gt;AddForceAtRelativePosition(buoyancy_force, this-&gt;rel_CoB);
-    }
 
-} // namespace triton_gazebo
+    <span class="n">void</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">ComputeDampingMatrix</span><span class="p">(</span><span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector6d</span><span class="o">&amp;</span> <span class="n">_vel</span><span class="p">,</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix6d</span> <span class="o">&amp;</span><span class="n">_D</span><span class="p">)</span> <span class="n">const</span>
+    <span class="p">{</span>
+        <span class="o">//</span> <span class="n">From</span> <span class="n">Antonelli</span> <span class="mi">2014</span><span class="p">:</span> <span class="n">the</span> <span class="n">viscosity</span> <span class="n">of</span> <span class="n">the</span> <span class="n">fluid</span> <span class="n">causes</span>
+        <span class="o">//</span> <span class="n">the</span> <span class="n">presence</span> <span class="n">of</span> <span class="n">dissipative</span> <span class="n">drag</span> <span class="ow">and</span> <span class="n">lift</span> <span class="n">forces</span> <span class="n">on</span> <span class="n">the</span>
+        <span class="o">//</span> <span class="n">body</span><span class="o">.</span> <span class="n">A</span> <span class="n">common</span> <span class="n">simplification</span> <span class="ow">is</span> <span class="n">to</span> <span class="n">consider</span> <span class="n">only</span> <span class="n">linear</span>
+        <span class="o">//</span> <span class="ow">and</span> <span class="n">quadratic</span> <span class="n">damping</span> <span class="n">terms</span> <span class="ow">and</span> <span class="n">group</span> <span class="n">these</span> <span class="n">terms</span> <span class="ow">in</span> <span class="n">a</span>
+        <span class="o">//</span> <span class="n">matrix</span> <span class="n">Drb</span>
+
+        <span class="n">_D</span><span class="o">.</span><span class="n">setZero</span><span class="p">();</span>
+
+        <span class="n">_D</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="p">(</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">linear_damping</span> <span class="o">+</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">offsetLinearDamping</span> <span class="o">*</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix6d</span><span class="p">::</span><span class="n">Identity</span><span class="p">())</span> <span class="o">-</span>
+                    <span class="n">_vel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">DLinForwardSpeed</span> <span class="o">+</span>
+                    <span class="n">this</span><span class="o">-&gt;</span><span class="n">offsetLinForwardSpeedDamping</span> <span class="o">*</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix6d</span><span class="p">::</span><span class="n">Identity</span><span class="p">());</span>
+
+        <span class="o">//</span> <span class="n">Nonlinear</span> <span class="n">damping</span> <span class="n">matrix</span> <span class="ow">is</span> <span class="n">considered</span> <span class="k">as</span> <span class="n">a</span> <span class="n">diagonal</span> <span class="n">matrix</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">MAX_DIMENSION</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_D</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">+=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="p">(</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">non_linear_damping</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">offsetNonLinDamping</span><span class="p">)</span> <span class="o">*</span> <span class="n">std</span><span class="p">::</span><span class="n">fabs</span><span class="p">(</span><span class="n">_vel</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="n">_D</span> <span class="o">*=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">scalingDamping</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix6d</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">GetAddedMass</span><span class="p">()</span> <span class="n">const</span>
+    <span class="p">{</span>
+        <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix6d</span> <span class="n">M_d</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">added_mass</span> <span class="o">+</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">offsetAddedMass</span> <span class="o">*</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix6d</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
+
+        <span class="k">return</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">scalingAddedMass</span> <span class="o">*</span> <span class="n">M_d</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="n">Constant</span> <span class="n">vertical</span> <span class="n">force</span> <span class="n">on</span> <span class="n">center</span> <span class="n">of</span> <span class="n">mass</span><span class="o">.</span> 
+    <span class="n">void</span> <span class="n">HydrodynamicsPlugin</span><span class="p">::</span><span class="n">ApplyBuoyancyForce</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">double</span> <span class="n">vol</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">volume</span><span class="p">;</span>
+        <span class="n">double</span> <span class="n">rho</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">fluid_density</span><span class="p">;</span>
+        <span class="n">ignition</span><span class="p">::</span><span class="n">math</span><span class="p">::</span><span class="n">Vector3d</span> <span class="n">buoyancy_force</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">is_neutrally_buoyant</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="o">//</span> <span class="n">the</span> <span class="n">buoyant</span> <span class="n">force</span><span class="p">:</span> <span class="n">Fb</span> <span class="o">=</span> <span class="n">fluid_density</span> <span class="o">*</span> <span class="n">gravity</span> <span class="o">*</span> <span class="n">volume</span> <span class="n">of</span> <span class="n">fluid</span> <span class="n">displaced</span>
+            <span class="n">buoyancy_force</span> <span class="o">=</span> <span class="o">-</span><span class="n">rho</span> <span class="o">*</span> <span class="n">vol</span> <span class="o">*</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">scalingBuoyancy</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">buoyancy_force</span> <span class="o">=</span> <span class="o">-</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">mass</span> <span class="o">*</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">gravity</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">AddForceAtRelativePosition</span><span class="p">(</span><span class="n">buoyancy_force</span><span class="p">,</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">rel_CoB</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">triton_gazebo</span>
 
 </pre></div>
 </div>
@@ -817,7 +819,7 @@ namespace triton_gazebo
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -844,8 +846,6 @@ namespace triton_gazebo
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
@@ -890,8 +890,8 @@ By UBC Subbots
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

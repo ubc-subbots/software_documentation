@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>object_recognizer.md &#8212; Software Documentation</title>
   
@@ -15,49 +14,49 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter_list/object_recognizer';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -72,27 +71,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -114,8 +109,13 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -139,6 +139,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../intro.html">
   
@@ -160,7 +162,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -178,19 +180,19 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="hardware_interaction/connect.html">Hardware Connection</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="hardware_interaction/connect.html">Hardware Connection</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="hardware_interaction/thruster_configuration.html">Thruster Configuration</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="code/launch.html">Launch Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="code/launch.html">Launch Files</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="code/trajectory_generator_launch.html">trajectory_generator_launch.py</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_bringup.html">Triton Bringup</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_bringup.html">Triton Bringup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="teleop_sim_bringup_launch.html">Teleop Sim Bringup Launch</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_controls.html">Triton Controls</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_controls.html">Triton Controls</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="state_estimator_config.html">state_estimator_config.md</a></li>
 <li class="toctree-l2"><a class="reference internal" href="state_estimator_config_GT_only.html">state_estimator_config_GT_only.md</a></li>
 <li class="toctree-l2"><a class="reference internal" href="state_estimator_config_IMU_only.html">state_estimator_config_IMU_only.md</a></li>
@@ -210,8 +212,8 @@
 <li class="toctree-l2"><a class="reference internal" href="predetermined_thrust.html">predetermined_thrust.md</a></li>
 <li class="toctree-l2"><a class="reference internal" href="waypoint_marker_tester.html">waypoint_marker_tester.md</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_example.html">Triton Example</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_example.html">Triton Example</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="params_one.html">Params One.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="params_two.html">Params Two.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="example_launch.html">Example Launch</a></li>
@@ -219,13 +221,13 @@
 <li class="toctree-l2"><a class="reference internal" href="component_two.html">Component Two.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="test_example_launch.html">Test Example Launch</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_gate.html">Triton Gate</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_gate.html">Triton Gate</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gate_detector_launch.html">Gate Detector Launch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gate_detector.html">Gate Detector.</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_gazebo.html">Triton Gazebo</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_gazebo.html">Triton Gazebo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="underwater_camera.html">Underwater Camera.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo_utils.html">Gazebo Utils.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gate_navigation_test.html">Gate Navigation Test</a></li>
@@ -253,21 +255,21 @@
 <li class="toctree-l2"><a class="reference internal" href="clean_data.html">Clean Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="train_yolo.html">Train Yolo</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="triton_object_recognition.html">Triton Object Recognition</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="triton_object_recognition.html">Triton Object Recognition</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="tiny_yolov3_launch.html">Tiny Yolov3 Launch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tiny_yolov4_launch.html">Tiny Yolov4 Launch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tiny_yolov4_realsense_launch.html">Tiny Yolov4 Realsense Launch</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Object Recognizer.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="test_object_recognition_launch.html">Test Object Recognition Launch</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_pid_controller.html">Triton Pid Controller</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_pid_controller.html">Triton Pid Controller</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="pid.html">Pid.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="triton_pid_controller_launch.html">Triton Pid Controller Launch</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_pipeline.html">Triton Pipeline</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_pipeline.html">Triton Pipeline</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="camera1.html">Camera1.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="camera1_info.html">Camera1 Info.Y</a></li>
 <li class="toctree-l2"><a class="reference internal" href="camera2.html">Camera2.Y</a></li>
@@ -304,19 +306,19 @@
 <li class="toctree-l2"><a class="reference internal" href="pipeline_manager.html">Pipeline Manager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pipeline_sequence_manager.html">Pipeline Sequence Manager</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_teleop.html">Triton Teleop</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_teleop.html">Triton Teleop</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="keyboard_teleop_launch.html">Keyboard Teleop Launch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="keyboard_teleop.html">Keyboard Teleop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="key_publisher.html">Key Publisher</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sim_thrust_mapper.html">Sim Thrust Mapper</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="triton_vision_utils.html">Triton Vision Utils</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="triton_vision_utils.html">Triton Vision Utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="contour_features.html">Contour Features.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="object_detector.html">Object Detector.</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../markdown_guide.html">Misc</a></li>
 </ul>
 
@@ -333,7 +335,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -342,14 +344,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -474,10 +476,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -485,7 +487,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -516,322 +518,322 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="object-recognizer-md">
-<h1>object_recognizer.md<a class="headerlink" href="#object-recognizer-md" title="Permalink to this heading">#</a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>#include &quot;triton_object_recognition/object_recognizer.hpp&quot;
-#include &lt;opencv2/dnn.hpp&gt;
-#include &lt;boost/filesystem.hpp&gt;
-#include &lt;rcl_yaml_param_parser/parser.h&gt;
-#include &quot;ament_index_cpp/get_package_share_directory.hpp&quot;
-using std::placeholders::_1;
-using std::placeholders::_2;
+<h1>object_recognizer.md<a class="headerlink" href="#object-recognizer-md" title="Link to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &quot;triton_object_recognition/object_recognizer.hpp&quot;</span>
+<span class="c1">#include &lt;opencv2/dnn.hpp&gt;</span>
+<span class="c1">#include &lt;boost/filesystem.hpp&gt;</span>
+<span class="c1">#include &lt;rcl_yaml_param_parser/parser.h&gt;</span>
+<span class="c1">#include &quot;ament_index_cpp/get_package_share_directory.hpp&quot;</span>
+<span class="n">using</span> <span class="n">std</span><span class="p">::</span><span class="n">placeholders</span><span class="p">::</span><span class="n">_1</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">std</span><span class="p">::</span><span class="n">placeholders</span><span class="p">::</span><span class="n">_2</span><span class="p">;</span>
 
-namespace triton_object_recognition
-{
-    ObjectRecognizer::ObjectRecognizer(const rclcpp::NodeOptions &amp; options)
-    : Node(&quot;object_recognizer&quot;, options) 
-    {
-        // Create publisher, subscriber, and service
-        publisher_ = this-&gt;create_publisher&lt;triton_interfaces::msg::DetectionBoxArray&gt;(
-            &quot;object_recognizer/out&quot;, 
-            10
-        );
+<span class="n">namespace</span> <span class="n">triton_object_recognition</span>
+<span class="p">{</span>
+    <span class="n">ObjectRecognizer</span><span class="p">::</span><span class="n">ObjectRecognizer</span><span class="p">(</span><span class="n">const</span> <span class="n">rclcpp</span><span class="p">::</span><span class="n">NodeOptions</span> <span class="o">&amp;</span> <span class="n">options</span><span class="p">)</span>
+    <span class="p">:</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;object_recognizer&quot;</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="o">//</span> <span class="n">Create</span> <span class="n">publisher</span><span class="p">,</span> <span class="n">subscriber</span><span class="p">,</span> <span class="ow">and</span> <span class="n">service</span>
+        <span class="n">publisher_</span> <span class="o">=</span> <span class="n">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">triton_interfaces</span><span class="p">::</span><span class="n">msg</span><span class="p">::</span><span class="n">DetectionBoxArray</span><span class="o">&gt;</span><span class="p">(</span>
+            <span class="s2">&quot;object_recognizer/out&quot;</span><span class="p">,</span> 
+            <span class="mi">10</span>
+        <span class="p">);</span>
 
-        subscription_ = image_transport::create_subscription(this,
-            &quot;object_recognizer/in&quot;,
-            std::bind(&amp;ObjectRecognizer::subscriberCallback, this, _1),
-            &quot;raw&quot;
-        );
+        <span class="n">subscription_</span> <span class="o">=</span> <span class="n">image_transport</span><span class="p">::</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">this</span><span class="p">,</span>
+            <span class="s2">&quot;object_recognizer/in&quot;</span><span class="p">,</span>
+            <span class="n">std</span><span class="p">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ObjectRecognizer</span><span class="p">::</span><span class="n">subscriberCallback</span><span class="p">,</span> <span class="n">this</span><span class="p">,</span> <span class="n">_1</span><span class="p">),</span>
+            <span class="s2">&quot;raw&quot;</span>
+        <span class="p">);</span>
 
-        service_ = create_service&lt;triton_interfaces::srv::ObjectDetection&gt;(
-            &quot;object_recognizer/recognize&quot;,
-            std::bind(&amp;ObjectRecognizer::serviceCallback, this, _1, _2)
-        );
+        <span class="n">service_</span> <span class="o">=</span> <span class="n">create_service</span><span class="o">&lt;</span><span class="n">triton_interfaces</span><span class="p">::</span><span class="n">srv</span><span class="p">::</span><span class="n">ObjectDetection</span><span class="o">&gt;</span><span class="p">(</span>
+            <span class="s2">&quot;object_recognizer/recognize&quot;</span><span class="p">,</span>
+            <span class="n">std</span><span class="p">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ObjectRecognizer</span><span class="p">::</span><span class="n">serviceCallback</span><span class="p">,</span> <span class="n">this</span><span class="p">,</span> <span class="n">_1</span><span class="p">,</span> <span class="n">_2</span><span class="p">)</span>
+        <span class="p">);</span>
 
-        #if DEBUG_VISUALIZE
-            debug_publisher_ = image_transport::create_publisher(this, &quot;object_recognizer/debug&quot;);
-        #endif
+        <span class="c1">#if DEBUG_VISUALIZE</span>
+            <span class="n">debug_publisher_</span> <span class="o">=</span> <span class="n">image_transport</span><span class="p">::</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="s2">&quot;object_recognizer/debug&quot;</span><span class="p">);</span>
+        <span class="c1">#endif</span>
 
-        // Populate parameters
-        this-&gt;declare_parameter(&quot;weights_filename&quot;, weights_filename_);
-        this-&gt;declare_parameter(&quot;classes&quot;, classes_);
-        this-&gt;declare_parameter(&quot;conf_threshold&quot;, conf_threshold_);
-        this-&gt;declare_parameter(&quot;nms_threshold&quot;, nms_threshold_);
-        this-&gt;declare_parameter(&quot;scale&quot;, scale_);
-        this-&gt;declare_parameter(&quot;inp_width&quot;, inp_width_);
-        this-&gt;declare_parameter(&quot;inp_height&quot;, inp_height_);
-        this-&gt;declare_parameter(&quot;swap_rb&quot;, swap_rb_);
-        this-&gt;declare_parameter(&quot;mean&quot;, std::vector&lt;double&gt;{mean_[0], mean_[1], mean_[2]});
-        this-&gt;declare_parameter(&quot;backend&quot;, (int) backend_);
-        this-&gt;declare_parameter(&quot;target&quot;, (int) target_);
+        <span class="o">//</span> <span class="n">Populate</span> <span class="n">parameters</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;weights_filename&quot;</span><span class="p">,</span> <span class="n">weights_filename_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;classes&quot;</span><span class="p">,</span> <span class="n">classes_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;conf_threshold&quot;</span><span class="p">,</span> <span class="n">conf_threshold_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;nms_threshold&quot;</span><span class="p">,</span> <span class="n">nms_threshold_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;scale&quot;</span><span class="p">,</span> <span class="n">scale_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;inp_width&quot;</span><span class="p">,</span> <span class="n">inp_width_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;inp_height&quot;</span><span class="p">,</span> <span class="n">inp_height_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;swap_rb&quot;</span><span class="p">,</span> <span class="n">swap_rb_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">{</span><span class="n">mean_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mean_</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">mean_</span><span class="p">[</span><span class="mi">2</span><span class="p">]});</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="n">backend_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="n">target_</span><span class="p">);</span>
 
-        this-&gt;get_parameter(&quot;weights_filename&quot;, weights_filename_);
-        this-&gt;get_parameter(&quot;classes&quot;, classes_);
-        this-&gt;get_parameter(&quot;conf_threshold&quot;, conf_threshold_);
-        this-&gt;get_parameter(&quot;nms_threshold&quot;, nms_threshold_);
-        this-&gt;get_parameter(&quot;scale&quot;, scale_);
-        this-&gt;get_parameter(&quot;inp_width&quot;, inp_width_);
-        this-&gt;get_parameter(&quot;inp_height&quot;, inp_height_);
-        this-&gt;get_parameter(&quot;swap_rb&quot;, swap_rb_);
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;weights_filename&quot;</span><span class="p">,</span> <span class="n">weights_filename_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;classes&quot;</span><span class="p">,</span> <span class="n">classes_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;conf_threshold&quot;</span><span class="p">,</span> <span class="n">conf_threshold_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;nms_threshold&quot;</span><span class="p">,</span> <span class="n">nms_threshold_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;scale&quot;</span><span class="p">,</span> <span class="n">scale_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;inp_width&quot;</span><span class="p">,</span> <span class="n">inp_width_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;inp_height&quot;</span><span class="p">,</span> <span class="n">inp_height_</span><span class="p">);</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;swap_rb&quot;</span><span class="p">,</span> <span class="n">swap_rb_</span><span class="p">);</span>
         
-        std::vector&lt;double&gt; mean_vector;
-        this-&gt;get_parameter(&quot;mean&quot;, mean_vector);
-        if (mean_vector.size() == 3) {
-            mean_ = cv::Scalar(mean_vector[0], mean_vector[1], mean_vector[2]);
-        }
+        <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">mean_vector</span><span class="p">;</span>
+        <span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="n">mean_vector</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">mean_vector</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">mean_</span> <span class="o">=</span> <span class="n">cv</span><span class="p">::</span><span class="n">Scalar</span><span class="p">(</span><span class="n">mean_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mean_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">mean_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+        <span class="p">}</span>
         
-        int backend, target;
-        if (this-&gt;get_parameter(&quot;backend&quot;, backend))
-            backend_ = (cv::dnn::Backend) backend;
-        if (this-&gt;get_parameter(&quot;target&quot;, target))
-            target_ = (cv::dnn::Target) target;
+        <span class="nb">int</span> <span class="n">backend</span><span class="p">,</span> <span class="n">target</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">,</span> <span class="n">backend</span><span class="p">))</span>
+            <span class="n">backend_</span> <span class="o">=</span> <span class="p">(</span><span class="n">cv</span><span class="p">::</span><span class="n">dnn</span><span class="p">::</span><span class="n">Backend</span><span class="p">)</span> <span class="n">backend</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="n">target</span><span class="p">))</span>
+            <span class="n">target_</span> <span class="o">=</span> <span class="p">(</span><span class="n">cv</span><span class="p">::</span><span class="n">dnn</span><span class="p">::</span><span class="n">Target</span><span class="p">)</span> <span class="n">target</span><span class="p">;</span>
 
-        // Get model folder as the install directory of this package
-        boost::filesystem::path model_folder = boost::filesystem::path(
-            ament_index_cpp::get_package_share_directory(&quot;triton_object_recognition&quot;));
+        <span class="o">//</span> <span class="n">Get</span> <span class="n">model</span> <span class="n">folder</span> <span class="k">as</span> <span class="n">the</span> <span class="n">install</span> <span class="n">directory</span> <span class="n">of</span> <span class="n">this</span> <span class="n">package</span>
+        <span class="n">boost</span><span class="p">::</span><span class="n">filesystem</span><span class="p">::</span><span class="n">path</span> <span class="n">model_folder</span> <span class="o">=</span> <span class="n">boost</span><span class="p">::</span><span class="n">filesystem</span><span class="p">::</span><span class="n">path</span><span class="p">(</span>
+            <span class="n">ament_index_cpp</span><span class="p">::</span><span class="n">get_package_share_directory</span><span class="p">(</span><span class="s2">&quot;triton_object_recognition&quot;</span><span class="p">));</span>
 
-        // Check weights file exists
-        boost::filesystem::path model_weights = model_folder / weights_filename_;
-        if (!boost::filesystem::exists(model_weights)){
-            RCLCPP_ERROR(get_logger(),&quot;Model weights not found at &quot; + model_weights.string());
-            return;
-        }
+        <span class="o">//</span> <span class="n">Check</span> <span class="n">weights</span> <span class="n">file</span> <span class="n">exists</span>
+        <span class="n">boost</span><span class="p">::</span><span class="n">filesystem</span><span class="p">::</span><span class="n">path</span> <span class="n">model_weights</span> <span class="o">=</span> <span class="n">model_folder</span> <span class="o">/</span> <span class="n">weights_filename_</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="n">boost</span><span class="p">::</span><span class="n">filesystem</span><span class="p">::</span><span class="n">exists</span><span class="p">(</span><span class="n">model_weights</span><span class="p">)){</span>
+            <span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span><span class="s2">&quot;Model weights not found at &quot;</span> <span class="o">+</span> <span class="n">model_weights</span><span class="o">.</span><span class="n">string</span><span class="p">());</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        // Load network
-        net_ = std::make_shared&lt;cv::dnn::Net&gt;();
-        try {
-            *net_ = cv::dnn::readNet(model_weights.string());
-        } catch(cv::Exception &amp;e){
-            RCLCPP_ERROR(get_logger(), e.what());
-        }
-        net_-&gt;setPreferableBackend(backend_);
-        net_-&gt;setPreferableTarget(target_);
-        RCLCPP_INFO(get_logger(),&quot;Object Recognizer successfully started!&quot;);
-    }
+        <span class="o">//</span> <span class="n">Load</span> <span class="n">network</span>
+        <span class="n">net_</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">cv</span><span class="p">::</span><span class="n">dnn</span><span class="p">::</span><span class="n">Net</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="o">*</span><span class="n">net_</span> <span class="o">=</span> <span class="n">cv</span><span class="p">::</span><span class="n">dnn</span><span class="p">::</span><span class="n">readNet</span><span class="p">(</span><span class="n">model_weights</span><span class="o">.</span><span class="n">string</span><span class="p">());</span>
+        <span class="p">}</span> <span class="n">catch</span><span class="p">(</span><span class="n">cv</span><span class="p">::</span><span class="ne">Exception</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">){</span>
+            <span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span> <span class="n">e</span><span class="o">.</span><span class="n">what</span><span class="p">());</span>
+        <span class="p">}</span>
+        <span class="n">net_</span><span class="o">-&gt;</span><span class="n">setPreferableBackend</span><span class="p">(</span><span class="n">backend_</span><span class="p">);</span>
+        <span class="n">net_</span><span class="o">-&gt;</span><span class="n">setPreferableTarget</span><span class="p">(</span><span class="n">target_</span><span class="p">);</span>
+        <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span><span class="s2">&quot;Object Recognizer successfully started!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    void ObjectRecognizer::subscriberCallback(const sensor_msgs::msg::Image::ConstSharedPtr &amp; msg) const
-    {
-        #if DEBUG_VISUALIZE
-            RCLCPP_INFO(get_logger(),&quot;Object Recognizer received image!&quot;);
-        #endif
-        publisher_-&gt;publish(process(*msg));
-    }
+    <span class="n">void</span> <span class="n">ObjectRecognizer</span><span class="p">::</span><span class="n">subscriberCallback</span><span class="p">(</span><span class="n">const</span> <span class="n">sensor_msgs</span><span class="p">::</span><span class="n">msg</span><span class="p">::</span><span class="n">Image</span><span class="p">::</span><span class="n">ConstSharedPtr</span> <span class="o">&amp;</span> <span class="n">msg</span><span class="p">)</span> <span class="n">const</span>
+    <span class="p">{</span>
+        <span class="c1">#if DEBUG_VISUALIZE</span>
+            <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span><span class="s2">&quot;Object Recognizer received image!&quot;</span><span class="p">);</span>
+        <span class="c1">#endif</span>
+        <span class="n">publisher_</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">process</span><span class="p">(</span><span class="o">*</span><span class="n">msg</span><span class="p">));</span>
+    <span class="p">}</span>
 
-    void ObjectRecognizer::serviceCallback(const triton_interfaces::srv::ObjectDetection::Request::SharedPtr request, 
-            const triton_interfaces::srv::ObjectDetection::Response::SharedPtr response) const
-    {
-        response-&gt;boxes_out = process(request-&gt;image_in);
-    }
+    <span class="n">void</span> <span class="n">ObjectRecognizer</span><span class="p">::</span><span class="n">serviceCallback</span><span class="p">(</span><span class="n">const</span> <span class="n">triton_interfaces</span><span class="p">::</span><span class="n">srv</span><span class="p">::</span><span class="n">ObjectDetection</span><span class="p">::</span><span class="n">Request</span><span class="p">::</span><span class="n">SharedPtr</span> <span class="n">request</span><span class="p">,</span> 
+            <span class="n">const</span> <span class="n">triton_interfaces</span><span class="p">::</span><span class="n">srv</span><span class="p">::</span><span class="n">ObjectDetection</span><span class="p">::</span><span class="n">Response</span><span class="p">::</span><span class="n">SharedPtr</span> <span class="n">response</span><span class="p">)</span> <span class="n">const</span>
+    <span class="p">{</span>
+        <span class="n">response</span><span class="o">-&gt;</span><span class="n">boxes_out</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">request</span><span class="o">-&gt;</span><span class="n">image_in</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    triton_interfaces::msg::DetectionBoxArray ObjectRecognizer::process(const sensor_msgs::msg::Image &amp; msg) const
-    {
-        // Get image from message
-        RCLCPP_INFO(this-&gt;get_logger(), &quot;In object_recognizer&quot;);
-        cv_bridge::CvImagePtr cv_ptr;
-        try {
-            cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
-        } catch (cv_bridge::Exception&amp; e) {
-            RCLCPP_ERROR(get_logger(),&quot;cv_bridge exception: %s&quot;, e.what());
-            return triton_interfaces::msg::DetectionBoxArray();
-        }
+    <span class="n">triton_interfaces</span><span class="p">::</span><span class="n">msg</span><span class="p">::</span><span class="n">DetectionBoxArray</span> <span class="n">ObjectRecognizer</span><span class="p">::</span><span class="n">process</span><span class="p">(</span><span class="n">const</span> <span class="n">sensor_msgs</span><span class="p">::</span><span class="n">msg</span><span class="p">::</span><span class="n">Image</span> <span class="o">&amp;</span> <span class="n">msg</span><span class="p">)</span> <span class="n">const</span>
+    <span class="p">{</span>
+        <span class="o">//</span> <span class="n">Get</span> <span class="n">image</span> <span class="kn">from</span><span class="w"> </span><span class="nn">message</span>
+        <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s2">&quot;In object_recognizer&quot;</span><span class="p">);</span>
+        <span class="n">cv_bridge</span><span class="p">::</span><span class="n">CvImagePtr</span> <span class="n">cv_ptr</span><span class="p">;</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">cv_ptr</span> <span class="o">=</span> <span class="n">cv_bridge</span><span class="p">::</span><span class="n">toCvCopy</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">sensor_msgs</span><span class="p">::</span><span class="n">image_encodings</span><span class="p">::</span><span class="n">BGR8</span><span class="p">);</span>
+        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">cv_bridge</span><span class="p">::</span><span class="ne">Exception</span><span class="o">&amp;</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span><span class="s2">&quot;cv_bridge exception: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">what</span><span class="p">());</span>
+            <span class="k">return</span> <span class="n">triton_interfaces</span><span class="p">::</span><span class="n">msg</span><span class="p">::</span><span class="n">DetectionBoxArray</span><span class="p">();</span>
+        <span class="p">}</span>
 
-        // Detect objects in image
-        preprocess(cv_ptr-&gt;image);
-        std::vector&lt;cv::String&gt; outNames = net_-&gt;getLayerNames();
-        std::vector&lt;cv::Mat&gt; outs;
-        net_-&gt;forward(outs, outNames);
+        <span class="o">//</span> <span class="n">Detect</span> <span class="n">objects</span> <span class="ow">in</span> <span class="n">image</span>
+        <span class="n">preprocess</span><span class="p">(</span><span class="n">cv_ptr</span><span class="o">-&gt;</span><span class="n">image</span><span class="p">);</span>
+        <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cv</span><span class="p">::</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">outNames</span> <span class="o">=</span> <span class="n">net_</span><span class="o">-&gt;</span><span class="n">getLayerNames</span><span class="p">();</span>
+        <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cv</span><span class="p">::</span><span class="n">Mat</span><span class="o">&gt;</span> <span class="n">outs</span><span class="p">;</span>
+        <span class="n">net_</span><span class="o">-&gt;</span><span class="n">forward</span><span class="p">(</span><span class="n">outs</span><span class="p">,</span> <span class="n">outNames</span><span class="p">);</span>
 
-        std::vector&lt;int&gt; classIds;
-        std::vector&lt;float&gt; confidences;
-        std::vector&lt;cv::Rect&gt; boxes;
-        postprocess(classIds, confidences, boxes, cv_ptr-&gt;image, outs);
+        <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">classIds</span><span class="p">;</span>
+        <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span> <span class="n">confidences</span><span class="p">;</span>
+        <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cv</span><span class="p">::</span><span class="n">Rect</span><span class="o">&gt;</span> <span class="n">boxes</span><span class="p">;</span>
+        <span class="n">postprocess</span><span class="p">(</span><span class="n">classIds</span><span class="p">,</span> <span class="n">confidences</span><span class="p">,</span> <span class="n">boxes</span><span class="p">,</span> <span class="n">cv_ptr</span><span class="o">-&gt;</span><span class="n">image</span><span class="p">,</span> <span class="n">outs</span><span class="p">);</span>
 
-        // Visualize when debugging
-        #if DEBUG_VISUALIZE
-            // Draw prediction boxes on input image
-            auto drawPred = [&amp;](int classId, float conf, int left, int top, int right, int bottom, cv::Mat&amp; frame)
-            {
-                cv::rectangle(frame, cv::Point(left, top), cv::Point(right, bottom), cv::Scalar(0, 255, 0));
+        <span class="o">//</span> <span class="n">Visualize</span> <span class="n">when</span> <span class="n">debugging</span>
+        <span class="c1">#if DEBUG_VISUALIZE</span>
+            <span class="o">//</span> <span class="n">Draw</span> <span class="n">prediction</span> <span class="n">boxes</span> <span class="n">on</span> <span class="nb">input</span> <span class="n">image</span>
+            <span class="n">auto</span> <span class="n">drawPred</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="nb">int</span> <span class="n">classId</span><span class="p">,</span> <span class="nb">float</span> <span class="n">conf</span><span class="p">,</span> <span class="nb">int</span> <span class="n">left</span><span class="p">,</span> <span class="nb">int</span> <span class="n">top</span><span class="p">,</span> <span class="nb">int</span> <span class="n">right</span><span class="p">,</span> <span class="nb">int</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">cv</span><span class="p">::</span><span class="n">Mat</span><span class="o">&amp;</span> <span class="n">frame</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">cv</span><span class="p">::</span><span class="n">rectangle</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv</span><span class="p">::</span><span class="n">Point</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">top</span><span class="p">),</span> <span class="n">cv</span><span class="p">::</span><span class="n">Point</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">bottom</span><span class="p">),</span> <span class="n">cv</span><span class="p">::</span><span class="n">Scalar</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
 
-                std::string label = cv::format(&quot;%.2f&quot;, conf);
-                if (!classes_.empty())
-                {
-                    CV_Assert(classId &lt; (int)classes_.size());
-                    label = classes_[classId] + &quot;: &quot; + label;
-                }
+                <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">label</span> <span class="o">=</span> <span class="n">cv</span><span class="p">::</span><span class="nb">format</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">conf</span><span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="n">classes_</span><span class="o">.</span><span class="n">empty</span><span class="p">())</span>
+                <span class="p">{</span>
+                    <span class="n">CV_Assert</span><span class="p">(</span><span class="n">classId</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="n">classes_</span><span class="o">.</span><span class="n">size</span><span class="p">());</span>
+                    <span class="n">label</span> <span class="o">=</span> <span class="n">classes_</span><span class="p">[</span><span class="n">classId</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="n">label</span><span class="p">;</span>
+                <span class="p">}</span>
 
-                int baseLine;
-                cv::Size labelSize = cv::getTextSize(label, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &amp;baseLine);
+                <span class="nb">int</span> <span class="n">baseLine</span><span class="p">;</span>
+                <span class="n">cv</span><span class="p">::</span><span class="n">Size</span> <span class="n">labelSize</span> <span class="o">=</span> <span class="n">cv</span><span class="p">::</span><span class="n">getTextSize</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">cv</span><span class="p">::</span><span class="n">FONT_HERSHEY_SIMPLEX</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">baseLine</span><span class="p">);</span>
 
-                top = std::max(top, labelSize.height);
-                cv::rectangle(frame, cv::Point(left, top - labelSize.height),
-                        cv::Point(left + labelSize.width, top + baseLine), cv::Scalar::all(255), cv::FILLED);
-                cv::putText(frame, label, cv::Point(left, top), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar());
-            };
-            cv::Mat frame = cv_ptr-&gt;image;
-            for (size_t idx = 0; idx &lt; boxes.size(); ++idx)
-            {
-                cv::Rect box = boxes[idx];
-                drawPred(classIds[idx], confidences[idx], box.x, box.y,
-                         box.x + box.width, box.y + box.height, frame);
-            }
-            sensor_msgs::msg::Image debug_msg;
-            cv_bridge::CvImage debug_image;
-            debug_image.image = frame;
-            debug_image.toImageMsg(debug_msg);
-            debug_publisher_.publish(debug_msg);
-            cv::imshow(&quot;test&quot;, frame);
-            cv::waitKey(1);
-        #endif
+                <span class="n">top</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="nb">max</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">labelSize</span><span class="o">.</span><span class="n">height</span><span class="p">);</span>
+                <span class="n">cv</span><span class="p">::</span><span class="n">rectangle</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv</span><span class="p">::</span><span class="n">Point</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">top</span> <span class="o">-</span> <span class="n">labelSize</span><span class="o">.</span><span class="n">height</span><span class="p">),</span>
+                        <span class="n">cv</span><span class="p">::</span><span class="n">Point</span><span class="p">(</span><span class="n">left</span> <span class="o">+</span> <span class="n">labelSize</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">top</span> <span class="o">+</span> <span class="n">baseLine</span><span class="p">),</span> <span class="n">cv</span><span class="p">::</span><span class="n">Scalar</span><span class="p">::</span><span class="nb">all</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">cv</span><span class="p">::</span><span class="n">FILLED</span><span class="p">);</span>
+                <span class="n">cv</span><span class="p">::</span><span class="n">putText</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">cv</span><span class="p">::</span><span class="n">Point</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">top</span><span class="p">),</span> <span class="n">cv</span><span class="p">::</span><span class="n">FONT_HERSHEY_SIMPLEX</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">cv</span><span class="p">::</span><span class="n">Scalar</span><span class="p">());</span>
+            <span class="p">};</span>
+            <span class="n">cv</span><span class="p">::</span><span class="n">Mat</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">cv_ptr</span><span class="o">-&gt;</span><span class="n">image</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">boxes</span><span class="o">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">idx</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">cv</span><span class="p">::</span><span class="n">Rect</span> <span class="n">box</span> <span class="o">=</span> <span class="n">boxes</span><span class="p">[</span><span class="n">idx</span><span class="p">];</span>
+                <span class="n">drawPred</span><span class="p">(</span><span class="n">classIds</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">confidences</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">box</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+                         <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">box</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">box</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">box</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="n">frame</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">sensor_msgs</span><span class="p">::</span><span class="n">msg</span><span class="p">::</span><span class="n">Image</span> <span class="n">debug_msg</span><span class="p">;</span>
+            <span class="n">cv_bridge</span><span class="p">::</span><span class="n">CvImage</span> <span class="n">debug_image</span><span class="p">;</span>
+            <span class="n">debug_image</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">frame</span><span class="p">;</span>
+            <span class="n">debug_image</span><span class="o">.</span><span class="n">toImageMsg</span><span class="p">(</span><span class="n">debug_msg</span><span class="p">);</span>
+            <span class="n">debug_publisher_</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">debug_msg</span><span class="p">);</span>
+            <span class="n">cv</span><span class="p">::</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">);</span>
+            <span class="n">cv</span><span class="p">::</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="c1">#endif</span>
 
-        // Publish message with detected boxes
-        auto message = triton_interfaces::msg::DetectionBoxArray();
-        for (size_t i = 0; i &lt; boxes.size(); i++){
-            triton_interfaces::msg::DetectionBox out;
-            out.class_id = classIds[i];
-            out.confidence = confidences[i];
-            out.x = boxes[i].x;
-            out.y = boxes[i].y;
-            out.height = boxes[i].height;
-            out.width = boxes[i].width;
-            message.boxes.push_back(out);
-        }
-        message.header.stamp = rclcpp::Time();
-        return message;
-    }
+        <span class="o">//</span> <span class="n">Publish</span> <span class="n">message</span> <span class="k">with</span> <span class="n">detected</span> <span class="n">boxes</span>
+        <span class="n">auto</span> <span class="n">message</span> <span class="o">=</span> <span class="n">triton_interfaces</span><span class="p">::</span><span class="n">msg</span><span class="p">::</span><span class="n">DetectionBoxArray</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">boxes</span><span class="o">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">triton_interfaces</span><span class="p">::</span><span class="n">msg</span><span class="p">::</span><span class="n">DetectionBox</span> <span class="n">out</span><span class="p">;</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">class_id</span> <span class="o">=</span> <span class="n">classIds</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="n">confidences</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">boxes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">;</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">boxes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">;</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">boxes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">height</span><span class="p">;</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">boxes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">width</span><span class="p">;</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">boxes</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">out</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">stamp</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="p">::</span><span class="n">Time</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">message</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    void ObjectRecognizer::preprocess(const cv::Mat&amp; frame) const
-    {
-        static cv::Mat blob;
-        // Create a 4D blob from a frame
-        cv::Size inp_size(inp_width_, inp_height_);
-        blob = cv::dnn::blobFromImage(frame, scale_, inp_size, mean_, swap_rb_, false);
+    <span class="n">void</span> <span class="n">ObjectRecognizer</span><span class="p">::</span><span class="n">preprocess</span><span class="p">(</span><span class="n">const</span> <span class="n">cv</span><span class="p">::</span><span class="n">Mat</span><span class="o">&amp;</span> <span class="n">frame</span><span class="p">)</span> <span class="n">const</span>
+    <span class="p">{</span>
+        <span class="n">static</span> <span class="n">cv</span><span class="p">::</span><span class="n">Mat</span> <span class="n">blob</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="mi">4</span><span class="n">D</span> <span class="n">blob</span> <span class="kn">from</span><span class="w"> </span><span class="nn">a</span> <span class="n">frame</span>
+        <span class="n">cv</span><span class="p">::</span><span class="n">Size</span> <span class="n">inp_size</span><span class="p">(</span><span class="n">inp_width_</span><span class="p">,</span> <span class="n">inp_height_</span><span class="p">);</span>
+        <span class="n">blob</span> <span class="o">=</span> <span class="n">cv</span><span class="p">::</span><span class="n">dnn</span><span class="p">::</span><span class="n">blobFromImage</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">scale_</span><span class="p">,</span> <span class="n">inp_size</span><span class="p">,</span> <span class="n">mean_</span><span class="p">,</span> <span class="n">swap_rb_</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
 
-        // Run model
-        net_-&gt;setInput(blob, &quot;&quot;);
-        if (net_-&gt;getLayer(0)-&gt;outputNameToIndex(&quot;im_info&quot;) != -1)
-        {
-            cv::resize(frame, frame, inp_size);
-            cv::Mat imInfo = (cv::Mat_&lt;float&gt;(1, 3) &lt;&lt; inp_size.height, inp_size.width, 1.6f);
-            net_-&gt;setInput(imInfo, &quot;im_info&quot;);
-        }
-    }
+        <span class="o">//</span> <span class="n">Run</span> <span class="n">model</span>
+        <span class="n">net_</span><span class="o">-&gt;</span><span class="n">setInput</span><span class="p">(</span><span class="n">blob</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">net_</span><span class="o">-&gt;</span><span class="n">getLayer</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">outputNameToIndex</span><span class="p">(</span><span class="s2">&quot;im_info&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">cv</span><span class="p">::</span><span class="n">resize</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">frame</span><span class="p">,</span> <span class="n">inp_size</span><span class="p">);</span>
+            <span class="n">cv</span><span class="p">::</span><span class="n">Mat</span> <span class="n">imInfo</span> <span class="o">=</span> <span class="p">(</span><span class="n">cv</span><span class="p">::</span><span class="n">Mat_</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">inp_size</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="n">inp_size</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="mf">1.6</span><span class="n">f</span><span class="p">);</span>
+            <span class="n">net_</span><span class="o">-&gt;</span><span class="n">setInput</span><span class="p">(</span><span class="n">imInfo</span><span class="p">,</span> <span class="s2">&quot;im_info&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-    void ObjectRecognizer::postprocess(std::vector&lt;int&gt; &amp; classIds, std::vector&lt;float&gt; &amp; confidences, std::vector&lt;cv::Rect&gt; &amp; boxes, 
-            cv::Mat &amp; frame, const std::vector&lt;cv::Mat&gt;&amp; outs) const
-    {
-        static std::vector&lt;int&gt; outLayers = net_-&gt;getUnconnectedOutLayers();
-        static std::string outLayerType = net_-&gt;getLayer(outLayers[0])-&gt;type;
+    <span class="n">void</span> <span class="n">ObjectRecognizer</span><span class="p">::</span><span class="n">postprocess</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">classIds</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">confidences</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cv</span><span class="p">::</span><span class="n">Rect</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">boxes</span><span class="p">,</span> 
+            <span class="n">cv</span><span class="p">::</span><span class="n">Mat</span> <span class="o">&amp;</span> <span class="n">frame</span><span class="p">,</span> <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cv</span><span class="p">::</span><span class="n">Mat</span><span class="o">&gt;&amp;</span> <span class="n">outs</span><span class="p">)</span> <span class="n">const</span>
+    <span class="p">{</span>
+        <span class="n">static</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">outLayers</span> <span class="o">=</span> <span class="n">net_</span><span class="o">-&gt;</span><span class="n">getUnconnectedOutLayers</span><span class="p">();</span>
+        <span class="n">static</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">outLayerType</span> <span class="o">=</span> <span class="n">net_</span><span class="o">-&gt;</span><span class="n">getLayer</span><span class="p">(</span><span class="n">outLayers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-&gt;</span><span class="nb">type</span><span class="p">;</span>
 
-        if (outLayerType == &quot;DetectionOutput&quot;)
-        {
-            // Network produces output blob with a shape 1x1xNx7 where N is a number of
-            // detections and an every detection is a vector of values
-            // [batchId, classId, confidence, left, top, right, bottom]
-            CV_Assert(outs.size() &gt; 0);
-            for (size_t k = 0; k &lt; outs.size(); k++)
-            {
-                float* data = (float*)outs[k].data;
-                for (size_t i = 0; i &lt; outs[k].total(); i += 7)
-                {
-                    float confidence = data[i + 2];
-                    if (confidence &gt; conf_threshold_)
-                    {
-                        int left   = (int)data[i + 3];
-                        int top    = (int)data[i + 4];
-                        int right  = (int)data[i + 5];
-                        int bottom = (int)data[i + 6];
-                        int width  = right - left + 1;
-                        int height = bottom - top + 1;
-                        if (width &lt;= 2 || height &lt;= 2)
-                        {
-                            left   = (int)(data[i + 3] * frame.cols);
-                            top    = (int)(data[i + 4] * frame.rows);
-                            right  = (int)(data[i + 5] * frame.cols);
-                            bottom = (int)(data[i + 6] * frame.rows);
-                            width  = right - left + 1;
-                            height = bottom - top + 1;
-                        }
-                        classIds.push_back((int)(data[i + 1]) - 1);  // Skip 0th background class id.
-                        boxes.push_back(cv::Rect(left, top, width, height));
-                        confidences.push_back(confidence);
-                    }
-                }
-            }
-        }
-        else if (outLayerType == &quot;Region&quot;)
-        {
-            for (size_t i = 0; i &lt; outs.size(); ++i)
-            {
-                // Network produces output blob with a shape NxC where N is a number of
-                // detected objects and C is a number of classes + 4 where the first 4
-                // numbers are [center_x, center_y, width, height]
-                float* data = (float*)outs[i].data;
-                for (int j = 0; j &lt; outs[i].rows; ++j, data += outs[i].cols)
-                {
-                    cv::Mat scores = outs[i].row(j).colRange(5, outs[i].cols);
-                    cv::Point classIdPoint;
-                    double confidence;
-                    cv::minMaxLoc(scores, 0, &amp;confidence, 0, &amp;classIdPoint);
-                    if (confidence &gt; conf_threshold_)
-                    {
-                        int centerX = (int)(data[0] * frame.cols);
-                        int centerY = (int)(data[1] * frame.rows);
-                        int width = (int)(data[2] * frame.cols);
-                        int height = (int)(data[3] * frame.rows);
-                        int left = centerX - width / 2;
-                        int top = centerY - height / 2;
+        <span class="k">if</span> <span class="p">(</span><span class="n">outLayerType</span> <span class="o">==</span> <span class="s2">&quot;DetectionOutput&quot;</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="o">//</span> <span class="n">Network</span> <span class="n">produces</span> <span class="n">output</span> <span class="n">blob</span> <span class="k">with</span> <span class="n">a</span> <span class="n">shape</span> <span class="mi">1</span><span class="n">x1xNx7</span> <span class="n">where</span> <span class="n">N</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">number</span> <span class="n">of</span>
+            <span class="o">//</span> <span class="n">detections</span> <span class="ow">and</span> <span class="n">an</span> <span class="n">every</span> <span class="n">detection</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">vector</span> <span class="n">of</span> <span class="n">values</span>
+            <span class="o">//</span> <span class="p">[</span><span class="n">batchId</span><span class="p">,</span> <span class="n">classId</span><span class="p">,</span> <span class="n">confidence</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">bottom</span><span class="p">]</span>
+            <span class="n">CV_Assert</span><span class="p">(</span><span class="n">outs</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">outs</span><span class="o">.</span><span class="n">size</span><span class="p">();</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="nb">float</span><span class="o">*</span> <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="nb">float</span><span class="o">*</span><span class="p">)</span><span class="n">outs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">;</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">outs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">total</span><span class="p">();</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">7</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="nb">float</span> <span class="n">confidence</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">];</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">confidence</span> <span class="o">&gt;</span> <span class="n">conf_threshold_</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="nb">int</span> <span class="n">left</span>   <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">];</span>
+                        <span class="nb">int</span> <span class="n">top</span>    <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">4</span><span class="p">];</span>
+                        <span class="nb">int</span> <span class="n">right</span>  <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">5</span><span class="p">];</span>
+                        <span class="nb">int</span> <span class="n">bottom</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">6</span><span class="p">];</span>
+                        <span class="nb">int</span> <span class="n">width</span>  <span class="o">=</span> <span class="n">right</span> <span class="o">-</span> <span class="n">left</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                        <span class="nb">int</span> <span class="n">height</span> <span class="o">=</span> <span class="n">bottom</span> <span class="o">-</span> <span class="n">top</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">width</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">height</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span>
+                        <span class="p">{</span>
+                            <span class="n">left</span>   <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">frame</span><span class="o">.</span><span class="n">cols</span><span class="p">);</span>
+                            <span class="n">top</span>    <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">frame</span><span class="o">.</span><span class="n">rows</span><span class="p">);</span>
+                            <span class="n">right</span>  <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">5</span><span class="p">]</span> <span class="o">*</span> <span class="n">frame</span><span class="o">.</span><span class="n">cols</span><span class="p">);</span>
+                            <span class="n">bottom</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">6</span><span class="p">]</span> <span class="o">*</span> <span class="n">frame</span><span class="o">.</span><span class="n">rows</span><span class="p">);</span>
+                            <span class="n">width</span>  <span class="o">=</span> <span class="n">right</span> <span class="o">-</span> <span class="n">left</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                            <span class="n">height</span> <span class="o">=</span> <span class="n">bottom</span> <span class="o">-</span> <span class="n">top</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                        <span class="p">}</span>
+                        <span class="n">classIds</span><span class="o">.</span><span class="n">push_back</span><span class="p">((</span><span class="nb">int</span><span class="p">)(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>  <span class="o">//</span> <span class="n">Skip</span> <span class="mi">0</span><span class="n">th</span> <span class="n">background</span> <span class="k">class</span><span class="w"> </span><span class="nc">id</span><span class="o">.</span>
+                        <span class="n">boxes</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">cv</span><span class="p">::</span><span class="n">Rect</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">));</span>
+                        <span class="n">confidences</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">confidence</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">outLayerType</span> <span class="o">==</span> <span class="s2">&quot;Region&quot;</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">outs</span><span class="o">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="o">//</span> <span class="n">Network</span> <span class="n">produces</span> <span class="n">output</span> <span class="n">blob</span> <span class="k">with</span> <span class="n">a</span> <span class="n">shape</span> <span class="n">NxC</span> <span class="n">where</span> <span class="n">N</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">number</span> <span class="n">of</span>
+                <span class="o">//</span> <span class="n">detected</span> <span class="n">objects</span> <span class="ow">and</span> <span class="n">C</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">number</span> <span class="n">of</span> <span class="n">classes</span> <span class="o">+</span> <span class="mi">4</span> <span class="n">where</span> <span class="n">the</span> <span class="n">first</span> <span class="mi">4</span>
+                <span class="o">//</span> <span class="n">numbers</span> <span class="n">are</span> <span class="p">[</span><span class="n">center_x</span><span class="p">,</span> <span class="n">center_y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">]</span>
+                <span class="nb">float</span><span class="o">*</span> <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="nb">float</span><span class="o">*</span><span class="p">)</span><span class="n">outs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">;</span>
+                <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">outs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">rows</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">,</span> <span class="n">data</span> <span class="o">+=</span> <span class="n">outs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">cols</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">cv</span><span class="p">::</span><span class="n">Mat</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">outs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">.</span><span class="n">colRange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">outs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">cols</span><span class="p">);</span>
+                    <span class="n">cv</span><span class="p">::</span><span class="n">Point</span> <span class="n">classIdPoint</span><span class="p">;</span>
+                    <span class="n">double</span> <span class="n">confidence</span><span class="p">;</span>
+                    <span class="n">cv</span><span class="p">::</span><span class="n">minMaxLoc</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">confidence</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">classIdPoint</span><span class="p">);</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">confidence</span> <span class="o">&gt;</span> <span class="n">conf_threshold_</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="nb">int</span> <span class="n">centerX</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">frame</span><span class="o">.</span><span class="n">cols</span><span class="p">);</span>
+                        <span class="nb">int</span> <span class="n">centerY</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">frame</span><span class="o">.</span><span class="n">rows</span><span class="p">);</span>
+                        <span class="nb">int</span> <span class="n">width</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">frame</span><span class="o">.</span><span class="n">cols</span><span class="p">);</span>
+                        <span class="nb">int</span> <span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">frame</span><span class="o">.</span><span class="n">rows</span><span class="p">);</span>
+                        <span class="nb">int</span> <span class="n">left</span> <span class="o">=</span> <span class="n">centerX</span> <span class="o">-</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+                        <span class="nb">int</span> <span class="n">top</span> <span class="o">=</span> <span class="n">centerY</span> <span class="o">-</span> <span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 
-                        classIds.push_back(classIdPoint.x);
-                        confidences.push_back((float)confidence);
-                        boxes.push_back(cv::Rect(left, top, width, height));
-                    }
-                }
-            }
-        }
-        else
-            CV_Error(cv::Error::StsNotImplemented, &quot;Unknown output layer type: &quot; + outLayerType);
+                        <span class="n">classIds</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">classIdPoint</span><span class="o">.</span><span class="n">x</span><span class="p">);</span>
+                        <span class="n">confidences</span><span class="o">.</span><span class="n">push_back</span><span class="p">((</span><span class="nb">float</span><span class="p">)</span><span class="n">confidence</span><span class="p">);</span>
+                        <span class="n">boxes</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">cv</span><span class="p">::</span><span class="n">Rect</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">));</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+            <span class="n">CV_Error</span><span class="p">(</span><span class="n">cv</span><span class="p">::</span><span class="n">Error</span><span class="p">::</span><span class="n">StsNotImplemented</span><span class="p">,</span> <span class="s2">&quot;Unknown output layer type: &quot;</span> <span class="o">+</span> <span class="n">outLayerType</span><span class="p">);</span>
 
-        // NMS is used inside Region layer only on DNN_BACKEND_OPENCV for other backends we need NMS in sample
-        // or NMS is required if number of outputs &gt; 1
-        if (outLayers.size() &gt; 1 || (outLayerType == &quot;Region&quot;))
-        {
-            std::map&lt;int, std::vector&lt;size_t&gt; &gt; class2indices;
-            for (size_t i = 0; i &lt; classIds.size(); i++)
-            {
-                if (confidences[i] &gt;= conf_threshold_)
-                {
-                    class2indices[classIds[i]].push_back(i);
-                }
-            }
-            std::vector&lt;cv::Rect&gt; nmsBoxes;
-            std::vector&lt;float&gt; nmsConfidences;
-            std::vector&lt;int&gt; nmsClassIds;
-            for (std::map&lt;int, std::vector&lt;size_t&gt; &gt;::iterator it = class2indices.begin(); it != class2indices.end(); ++it)
-            {
-                std::vector&lt;cv::Rect&gt; localBoxes;
-                std::vector&lt;float&gt; localConfidences;
-                std::vector&lt;size_t&gt; classIndices = it-&gt;second;
-                for (size_t i = 0; i &lt; classIndices.size(); i++)
-                {
-                    localBoxes.push_back(boxes[classIndices[i]]);
-                    localConfidences.push_back(confidences[classIndices[i]]);
-                }
-                std::vector&lt;int&gt; nmsIndices;
-                cv::dnn::NMSBoxes(localBoxes, localConfidences, conf_threshold_, nms_threshold_, nmsIndices);
-                for (size_t i = 0; i &lt; nmsIndices.size(); i++)
-                {
-                    size_t idx = nmsIndices[i];
-                    nmsBoxes.push_back(localBoxes[idx]);
-                    nmsConfidences.push_back(localConfidences[idx]);
-                    nmsClassIds.push_back(it-&gt;first);
-                }
-            }
-            boxes = nmsBoxes;
-            classIds = nmsClassIds;
-            confidences = nmsConfidences;
-        }
-    }
-} // namespace triton_object_recognition
+        <span class="o">//</span> <span class="n">NMS</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">inside</span> <span class="n">Region</span> <span class="n">layer</span> <span class="n">only</span> <span class="n">on</span> <span class="n">DNN_BACKEND_OPENCV</span> <span class="k">for</span> <span class="n">other</span> <span class="n">backends</span> <span class="n">we</span> <span class="n">need</span> <span class="n">NMS</span> <span class="ow">in</span> <span class="n">sample</span>
+        <span class="o">//</span> <span class="ow">or</span> <span class="n">NMS</span> <span class="ow">is</span> <span class="n">required</span> <span class="k">if</span> <span class="n">number</span> <span class="n">of</span> <span class="n">outputs</span> <span class="o">&gt;</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">outLayers</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="p">(</span><span class="n">outLayerType</span> <span class="o">==</span> <span class="s2">&quot;Region&quot;</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="n">std</span><span class="p">::</span><span class="nb">map</span><span class="o">&lt;</span><span class="nb">int</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">size_t</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">class2indices</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">classIds</span><span class="o">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">confidences</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">conf_threshold_</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">class2indices</span><span class="p">[</span><span class="n">classIds</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cv</span><span class="p">::</span><span class="n">Rect</span><span class="o">&gt;</span> <span class="n">nmsBoxes</span><span class="p">;</span>
+            <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span> <span class="n">nmsConfidences</span><span class="p">;</span>
+            <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">nmsClassIds</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="nb">map</span><span class="o">&lt;</span><span class="nb">int</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">size_t</span><span class="o">&gt;</span> <span class="o">&gt;</span><span class="p">::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">class2indices</span><span class="o">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">class2indices</span><span class="o">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cv</span><span class="p">::</span><span class="n">Rect</span><span class="o">&gt;</span> <span class="n">localBoxes</span><span class="p">;</span>
+                <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span> <span class="n">localConfidences</span><span class="p">;</span>
+                <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">size_t</span><span class="o">&gt;</span> <span class="n">classIndices</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">classIndices</span><span class="o">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">localBoxes</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">boxes</span><span class="p">[</span><span class="n">classIndices</span><span class="p">[</span><span class="n">i</span><span class="p">]]);</span>
+                    <span class="n">localConfidences</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">confidences</span><span class="p">[</span><span class="n">classIndices</span><span class="p">[</span><span class="n">i</span><span class="p">]]);</span>
+                <span class="p">}</span>
+                <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">nmsIndices</span><span class="p">;</span>
+                <span class="n">cv</span><span class="p">::</span><span class="n">dnn</span><span class="p">::</span><span class="n">NMSBoxes</span><span class="p">(</span><span class="n">localBoxes</span><span class="p">,</span> <span class="n">localConfidences</span><span class="p">,</span> <span class="n">conf_threshold_</span><span class="p">,</span> <span class="n">nms_threshold_</span><span class="p">,</span> <span class="n">nmsIndices</span><span class="p">);</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nmsIndices</span><span class="o">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">size_t</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">nmsIndices</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                    <span class="n">nmsBoxes</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">localBoxes</span><span class="p">[</span><span class="n">idx</span><span class="p">]);</span>
+                    <span class="n">nmsConfidences</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">localConfidences</span><span class="p">[</span><span class="n">idx</span><span class="p">]);</span>
+                    <span class="n">nmsClassIds</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">boxes</span> <span class="o">=</span> <span class="n">nmsBoxes</span><span class="p">;</span>
+            <span class="n">classIds</span> <span class="o">=</span> <span class="n">nmsClassIds</span><span class="p">;</span>
+            <span class="n">confidences</span> <span class="o">=</span> <span class="n">nmsConfidences</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">triton_object_recognition</span>
 
 
 </pre></div>
@@ -865,7 +867,7 @@ namespace triton_object_recognition
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -892,8 +894,6 @@ namespace triton_object_recognition
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
@@ -938,8 +938,8 @@ By UBC Subbots
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
