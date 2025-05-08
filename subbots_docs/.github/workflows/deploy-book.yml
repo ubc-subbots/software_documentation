@@ -41,7 +41,7 @@ jobs:
         run: |
           # Assuming your book is in the root. If it's in a subdirectory like 'docs/',
           # then use: jupyter-book build docs/
-          jupyter-book build .
+          jupyter-book build subbots_docs/.
 
       - name: Deploy to GitHub Pages
         # This uses the popular peaceiris/actions-gh-pages action
