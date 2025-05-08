@@ -1,0 +1,54 @@
+name: Build and Deploy Jupyter Book
+
+on:
+  push:
+    branches:
+      - main  # Or master, or whatever your default branch is
+    paths:
+      # Paths are now relative to the repository root, pointing into subbots_docs/
+      - 'subbots_docs/**.md'
+      - 'subbots_docs/**.ipynb'
+      - 'subbots_docs/_toc.yml'
+      - 'subbots_docs/_config.yml'
+      # Assuming requirements.txt is still at the root.
+      # If it's in subbots_docs/, change to 'subbots_docs/requirements.txt'
+      - 'requirements.txt'
+      # Add any other source file patterns relevant to your book inside subbots_docs/
+      # e.g., 'subbots_docs/images/**', 'subbots_docs/custom_css/**'
+
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # If requirements.txt is at the root:
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          # If requirements.txt is in subbots_docs/:
+          # if [ -f subbots_docs/requirements.txt ]; then pip install -r subbots_docs/requirements.txt; fi
+          pip install jupyter-book ghp-import # Ensure these are installed
+
+      - name: Build the Jupyter Book
+        run: |
+          # Tell jupyter-book to build the content in the subbots_docs/ directory
+          jupyter-book build subbots_docs/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # The output directory will now be subbots_docs/_build/html
+          publish_dir: ./subbots_docs/_build/html
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
